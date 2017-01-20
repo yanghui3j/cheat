@@ -18,3 +18,9 @@ echo testingit|awk '{ print $1|& "cat > /tmp/1" }'
 
 # Loop over a file with getline
 awk '{ while(getline){ print } }' /etc/passwd
+
+# AWK redirection
+# https://www.gnu.org/software/gawk/manual/html_node/Redirection.html#Redirection
+awk '{ print $1 > "names.unsorted"
+    command = "sort -r > names.sorted"
+    print $1 | command }' mail-list

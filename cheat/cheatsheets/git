@@ -27,6 +27,15 @@ git log --oneline --graph --decorate --all
 git log --pretty=oneline --graph --decorate --all
 git log --oneline --graph --color --all --decorate
 
+# Check commit history of a file
+git log -- begin.txt
+
+# Check commit history of a file with more details
+git log -p -- begin.txt
+
+# Check commit history of a file with in oneline
+git log --pretty=oneline -- filename
+
 # To set your identity:
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com

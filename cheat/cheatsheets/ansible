@@ -1,0 +1,4 @@
+############## [ NOTES ] ###############
+
+# To validate local facts
+ansible <hostname> -m setup -a "filter=ansible_local"

@@ -19,6 +19,7 @@ cheat/cheatsheets/7z
 cheat/cheatsheets/__init__.py
 cheat/cheatsheets/ab
 cheat/cheatsheets/ansi
+cheat/cheatsheets/ansible
 cheat/cheatsheets/apk
 cheat/cheatsheets/apparmor
 cheat/cheatsheets/apt

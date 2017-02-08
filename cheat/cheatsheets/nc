@@ -1,6 +1,12 @@
 # To open a TCP connection to port 42 of host.example.com, using port 31337 as the source port, with a timeout of 5 seconds:
 nc -p 31337 -w 5 host.example.com 42
 
+# Alternatively, it might be useful to know which server software is running, and which versions. This information is often contained within the greeting banners. To retrieve these, it is necessary to first make a connection, and then break the connection when the banner has been retrieved. This can be accomplished by specifying a small timeout with the -w flag, or perhaps by issuing a "QUIT" command to the server:
+# http://www.computerhope.com/unix/nc.htm
+echo "QUIT" | nc host.example.com 20-30
+#SSH-1.99-OpenSSH_3.6.1p2 Protocol mismatch. 
+#220 host.example.com IMS SMTP Receiver Version 0.84 Ready
+
 # To open a UDP connection to port 53 of host.example.com:
 nc -u host.example.com 53
 

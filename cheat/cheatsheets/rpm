@@ -35,3 +35,6 @@ rpm -qpR mediawiki-1.4rc1-4.i586.rpm
 
 # Extract files from rpm package
 rpm2cpio ovpc-2.1.10.rpm | cpio  -idmv
+
+# View change logs for package
+rpm -q --changelog kernel | egrep "bnx2x: fix panic|2.6.32"

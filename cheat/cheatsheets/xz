@@ -19,3 +19,6 @@ mkdir initrd-tree; cd initrd-tree/; xzcat ../initrd.xz | cpio -d -i -m
 # to save prior version
 mv ../initrd.xz ../initrd.xz.`date +"%Y.%m.%d_%T"` # to save prior version
 find . | cpio -o -H newc | xz --check=crc32 --x86 --lzma2=dict=512KiB > ../initrd.xz
+
+# Extract a *.xz file, is equivalent to xz --decompress
+unxz FILENAME.xz

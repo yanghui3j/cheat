@@ -114,8 +114,10 @@ cheat/cheatsheets/less
 cheat/cheatsheets/lib
 cheat/cheatsheets/ln
 cheat/cheatsheets/ls
+cheat/cheatsheets/lshw
 cheat/cheatsheets/lsinitrd
 cheat/cheatsheets/lsof
+cheat/cheatsheets/lspci
 cheat/cheatsheets/lvdisplay
 cheat/cheatsheets/lvextend
 cheat/cheatsheets/lvm

@@ -1,2 +1,8 @@
-# Check the NIC driver and firmware information
+# Check the NIC driver and firmware information, To find Ethernet device driver and firmware information
 ethtool -i eth0
+
+# To display hardware settings of a network interface card with ethtool, run the following command
+ethtool eth0
+
+# To find factory-default MAC address information
+ethtool -P eth0

@@ -33,3 +33,6 @@ dmesg --kernel
 
 # show hp server information, need to install hp-health
 hpasmcli -s 'show iml'
+
+# To show detailed vendor information of your NIC, run the following
+lshw -class network

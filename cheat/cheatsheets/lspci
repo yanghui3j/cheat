@@ -1,0 +1,2 @@
+# To find the name of Ethernet card(s) available on your system, run the following
+lspci | grep -i 'ethernet'

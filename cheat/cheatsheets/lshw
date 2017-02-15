@@ -1,0 +1,2 @@
+# To show detailed vendor information of your NIC, run the following
+lshw -class network

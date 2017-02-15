@@ -38,3 +38,12 @@ rpm2cpio ovpc-2.1.10.rpm | cpio  -idmv
 
 # View change logs for package
 rpm -q --changelog kernel | egrep "bnx2x: fix panic|2.6.32"
+
+# View detailed info on package, like install date, build date
+rpm -qi rsyslog-7.6.0-1.el6.x86_64
+
+# Show install time-stamp for package 
+rpm -q --last package-name
+
+# Show time-stamp for all package 
+rpm -qa --last

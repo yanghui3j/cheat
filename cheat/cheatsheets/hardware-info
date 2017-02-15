@@ -48,3 +48,26 @@ inxi -Fx
 
 # Find block devices info
 lsblk
+
+# Provides a command line interface to various hard disk ioctls supported by the stock Linux ATA/IDE device driver subsystem.
+hdparm
+
+# Display information about installed hardware
+lsdev
+
+# Retrieve configuration and health status from LSI hardware RAID controllers
+mpt-status
+
+# Show status of logical drives attached to HP Smartarray controllers
+cciss_vol_status -V /dev/sdX 
+
+
+
+
+
+
+
+
+
+
+

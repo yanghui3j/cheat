@@ -36,3 +36,15 @@ hpasmcli -s 'show iml'
 
 # To show detailed vendor information of your NIC, run the following
 lshw -class network
+
+# Lists out the scsi/sata devices like hard drives and optical drives
+lsscsi
+
+# List usb buses and device details
+lsusb
+
+# Find hardware info on linux system
+inxi -Fx
+
+# Find block devices info
+lsblk

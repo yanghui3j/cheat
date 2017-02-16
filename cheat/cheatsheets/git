@@ -344,3 +344,18 @@ git branch -vv   # doubly verbose
 git branch branch_name --set-upstream-to your_new_remote/branch_name  # Without deleting anything, using git v1.8.0 or later
 OR...
 git branch --set-upstream branch_name your_new_remote/branch_name     # Using git up to v1.7.12
+
+# Rebase your branch based on the master
+## First checkout/pull master
+git checkout master
+git pull origin master
+## Checkout branch and rebase 
+git checkout RB
+git rebase master
+## Above 2 command can be done in 1
+git rebase master RB
+
+
+
+
+

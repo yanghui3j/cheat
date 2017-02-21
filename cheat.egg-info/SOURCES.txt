@@ -227,6 +227,7 @@ cheat/cheatsheets/tar
 cheat/cheatsheets/tcpdump
 cheat/cheatsheets/tcptrace
 cheat/cheatsheets/tee
+cheat/cheatsheets/telnet
 cheat/cheatsheets/tmpfs
 cheat/cheatsheets/tmux
 cheat/cheatsheets/top

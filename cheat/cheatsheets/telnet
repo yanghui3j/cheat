@@ -1,0 +1,8 @@
+# NOTES
+# Use telnet to send email
+# http://www.yuki-onna.co.uk/email/smtp.html
+telnet mail.domain.ext 25
+HELO local.domain.name
+MAIL FROM: mail@domain.ext
+RCPT TO: mail@otherdomain.ext
+DATA

@@ -1,6 +1,7 @@
 # NOTES
 # Use telnet to send email
 # http://www.yuki-onna.co.uk/email/smtp.html
+# http://www.kongtechnology.com/2008/01/27/smtp-authentication-and-send-emails-using-telnet/
 telnet mail.domain.ext 25
 HELO local.domain.name
 MAIL FROM: mail@domain.ext

@@ -1,0 +1,30 @@
+# NOTES
+# http://www.unixmantra.com/2014/05/hp-cluster-service-guard-commands.html#um1
+# http://www.arizonaed.com/mirror/www.introcomp.co.uk/hpux/service_guard_commands.html
+
+# start entire cluster
+cmruncl -v
+
+# stop entire cluster
+cmhaltcl
+
+# check status of cluster
+cmviewcl
+
+# start a single node
+cmrunnode -v nodename
+
+# stop a node
+cmhaltnode -f -v nodename
+
+# get current configuration
+cmgetconf -C config_name
+
+# start package on node
+cmrunpkg -n nodename package_name
+
+# enable switching
+cmmodpkg -e package_name
+
+# stop package
+cmhaltpkg package_name

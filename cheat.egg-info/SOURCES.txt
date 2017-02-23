@@ -88,6 +88,7 @@ cheat/cheatsheets/history
 cheat/cheatsheets/host
 cheat/cheatsheets/hpacucli
 cheat/cheatsheets/hpbladecenter
+cheat/cheatsheets/hpsg
 cheat/cheatsheets/hpssacli
 cheat/cheatsheets/hpux
 cheat/cheatsheets/http

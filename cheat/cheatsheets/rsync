@@ -6,7 +6,6 @@ rsync -avz /source host:/dest
 rsync -avc /source/ /dest/
 
 # Copy contents of /src/foo to destination:
-
 # This command will create /dest/foo if it does not already exist
 rsync -auv /src/foo /dest
 

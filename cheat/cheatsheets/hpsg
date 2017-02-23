@@ -1,6 +1,7 @@
 # NOTES
 # http://www.unixmantra.com/2014/05/hp-cluster-service-guard-commands.html#um1
 # http://www.arizonaed.com/mirror/www.introcomp.co.uk/hpux/service_guard_commands.html
+# http://www.foxutech.com/hp-cluster-service-guard-commands/
 
 # start entire cluster
 cmruncl -v

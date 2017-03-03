@@ -15,7 +15,7 @@ mount -t nfs example.com:/remote/example/dir /local/example/dir
 # https://wiki.ubuntu.com/MountWindowsSharesPermanently#Mount_password_protected_network_folders
 # https://help.ubuntu.com/community/Samba/SambaClientGuide
 # https://help.ubuntu.com/community/MountWindowsSharesPermanently
-sudo mount -t cifs //file-host/directory -o username='jzhu', pssword='PASSW0RD' /mnt
+sudo mount -t cifs //file-host/directory -o username='jzhu', password='PASSW0RD' /mnt
 sudo mount -t cifs //file-host/directory /mnt -o username=jzhu
 
 # To mount an ISO

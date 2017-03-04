@@ -1,0 +1,6 @@
+# NOTES for Elastic BeanStalk
+# http://colintoh.com/blog/aws-elastic-beanstalk-survival-guide-introduction
+
+# Create an Elastic Beanstalk Application
+eb init
+

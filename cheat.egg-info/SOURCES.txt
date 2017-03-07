@@ -1,4 +1,3 @@
-CHANGELOG
 CONTRIBUTING.md
 LICENSE
 MANIFEST.in
@@ -37,6 +36,7 @@ cheat/cheatsheets/bower
 cheat/cheatsheets/brctl
 cheat/cheatsheets/brocade
 cheat/cheatsheets/bzip2
+cheat/cheatsheets/cheat
 cheat/cheatsheets/chmod
 cheat/cheatsheets/chown
 cheat/cheatsheets/cibadmin
@@ -66,6 +66,7 @@ cheat/cheatsheets/dns
 cheat/cheatsheets/docker
 cheat/cheatsheets/dpkg
 cheat/cheatsheets/du
+cheat/cheatsheets/eb
 cheat/cheatsheets/emacs
 cheat/cheatsheets/ethtool
 cheat/cheatsheets/fab
@@ -84,6 +85,7 @@ cheat/cheatsheets/gs
 cheat/cheatsheets/gzip
 cheat/cheatsheets/hardware-info
 cheat/cheatsheets/head
+cheat/cheatsheets/hg
 cheat/cheatsheets/history
 cheat/cheatsheets/host
 cheat/cheatsheets/hpacucli
@@ -104,15 +106,12 @@ cheat/cheatsheets/iptables
 cheat/cheatsheets/irssi
 cheat/cheatsheets/iwconfig
 cheat/cheatsheets/journalctl
-<<<<<<< 16be21afae679723f178b97d69035277c835d8d3
 cheat/cheatsheets/jq
 cheat/cheatsheets/jrnl
 cheat/cheatsheets/kafka
 cheat/cheatsheets/keystone
 cheat/cheatsheets/kill
 cheat/cheatsheets/ldapsearch
-=======
->>>>>>> mod
 cheat/cheatsheets/ldapvi
 cheat/cheatsheets/less
 cheat/cheatsheets/lib
@@ -174,11 +173,13 @@ cheat/cheatsheets/ping
 cheat/cheatsheets/ping6
 cheat/cheatsheets/pip
 cheat/cheatsheets/pkgtools
+cheat/cheatsheets/popd
 cheat/cheatsheets/postfix
 cheat/cheatsheets/postgresql
 cheat/cheatsheets/proc
 cheat/cheatsheets/ps
 cheat/cheatsheets/puppet
+cheat/cheatsheets/pushd
 cheat/cheatsheets/python
 cheat/cheatsheets/rabbitmqadmin
 cheat/cheatsheets/rabbitmqctl
@@ -201,6 +202,7 @@ cheat/cheatsheets/sed
 cheat/cheatsheets/selinux
 cheat/cheatsheets/sendmail
 cheat/cheatsheets/shred
+cheat/cheatsheets/shutdown
 cheat/cheatsheets/smartctl
 cheat/cheatsheets/smbclient
 cheat/cheatsheets/snmpget
@@ -220,6 +222,7 @@ cheat/cheatsheets/sshuttle
 cheat/cheatsheets/stdout
 cheat/cheatsheets/storcli
 cheat/cheatsheets/strace
+cheat/cheatsheets/su
 cheat/cheatsheets/svn
 cheat/cheatsheets/sys
 cheat/cheatsheets/sysctl

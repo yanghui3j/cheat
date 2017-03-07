@@ -15,3 +15,5 @@ ldapvi -h ldapmaster.sample.net -D "user=jzhu,ou=users,dc=sample,dc=net" -b "ou=
 # Search for the entire directory
 ldapvi -ZZ -s sub  -h ldapmaster.sample.net -D "user=jzhu,ou=users,dc=sample,dc=net" -b "dc=sample,dc=net" "(attribute=value)"
 
+# Use ldapvi to edit something in LDAP server
+ldapvi -h ldapserver -D "user=jzhu,ou=users,dc=sample,dc=net" -b "ou=something,dc=battle,dc=net" -x "(location=abc-http*)" 

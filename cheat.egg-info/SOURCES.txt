@@ -104,12 +104,15 @@ cheat/cheatsheets/iptables
 cheat/cheatsheets/irssi
 cheat/cheatsheets/iwconfig
 cheat/cheatsheets/journalctl
+<<<<<<< 16be21afae679723f178b97d69035277c835d8d3
 cheat/cheatsheets/jq
 cheat/cheatsheets/jrnl
 cheat/cheatsheets/kafka
 cheat/cheatsheets/keystone
 cheat/cheatsheets/kill
 cheat/cheatsheets/ldapsearch
+=======
+>>>>>>> mod
 cheat/cheatsheets/ldapvi
 cheat/cheatsheets/less
 cheat/cheatsheets/lib

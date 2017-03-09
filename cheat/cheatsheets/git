@@ -339,6 +339,12 @@ git push mathnet -f
 # How do i get git to show me which branches are tracking what
 git branch -vv   # doubly verbose
 
+# For local branches only
+git branch -lvv
+
+# For remote branches only
+git branch -rvv
+
 # How do I change the remote a git branch is tracking?
 # http://www.drdobbs.com/architecture-and-design/git-tracking-relationships-use-the-full/240168881
 git branch branch_name --set-upstream-to your_new_remote/branch_name  # Without deleting anything, using git v1.8.0 or later

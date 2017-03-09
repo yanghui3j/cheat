@@ -26,6 +26,6 @@ aws configure --profile staging
 aws configure --profile production
 
 ## Using existing profile in .aws/config and .aws/credentials, you can run the following
-## command to switch to the profile;
+## command to switch to the application and environment
 ## This will prompts for region and environment, if credentials are already setup
 eb init helloeb --profile staging

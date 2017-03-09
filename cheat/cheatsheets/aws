@@ -1,0 +1,11 @@
+# NOTES for awscli
+
+# Use aws cli profile to show aws information
+aws --profile core --region ap-northeast-1 ec2 describe-vpcs
+aws --profile mfa --region us-west-2 ec2 describe-vpcs
+aws --profile core-apne1 ec2 describe-vpcs
+aws --profile core-usw2 ec2 describe-vpcs
+
+# Set ENV Variable for default profile
+export AWS_PROFILE="PROFILE-NAME"
+aws ec2 describe-vpcs

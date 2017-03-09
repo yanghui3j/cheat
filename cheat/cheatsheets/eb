@@ -4,3 +4,24 @@
 # Create an Elastic Beanstalk Application
 eb init
 
+### Deploying two different environments inside the same Elastic Beanstalk Application
+# Once the beanstalk Application has been created, you can do the following
+
+# Switching and deploying to staging
+eb use helloeb-staging
+eb deploy
+
+# Switching and deploying to production
+eb use helloeb-production
+eb deploy
+
+## Create a staging credential profile
+aws configure --profile staging
+
+## Create a production credential profile
+aws configure --profile production
+
+## Using existing profile in .aws/config and .aws/credentials, you can run the following
+## command to switch to the profile;
+## This will prompts for region and environment, if credentials are already setup
+eb init helloeb --profile staging

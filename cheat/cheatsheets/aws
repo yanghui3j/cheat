@@ -9,3 +9,9 @@ aws --profile profilename-usw2 ec2 describe-vpcs
 # Set ENV Variable for default profile
 export AWS_PROFILE="PROFILE-NAME"
 aws ec2 describe-vpcs
+
+## Create a staging credential profile
+aws configure --profile staging
+
+## Create a production credential profile
+aws configure --profile production

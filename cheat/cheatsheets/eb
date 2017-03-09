@@ -1,5 +1,9 @@
 # NOTES for Elastic BeanStalk
+# HOW TO USE DB CLI TO DEPLOY APPLICATION
 # http://colintoh.com/blog/aws-elastic-beanstalk-survival-guide-introduction
+# 
+# CONFIGURE EB CLI
+# http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-configuration.html
 
 # Create an Elastic Beanstalk Application
 eb init

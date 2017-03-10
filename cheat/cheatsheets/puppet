@@ -55,3 +55,6 @@ puppet agent -t --evaltrace --summarize
 # Generates boilerplate for a new module by creating the directory structure and files recommended for the Puppet community's best practices.
 # puppet help module generate
 puppet module generate --debug user-demomodule
+
+# Validate a manifest file
+puppet parser validate test.pp

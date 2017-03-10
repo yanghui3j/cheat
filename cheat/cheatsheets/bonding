@@ -3,3 +3,6 @@ This is for things about linux bonding
 
 # Check the bonding devices status
 cat /sys/class/net/bond*
+
+# Adding the following line in the ifcfg-interface for a LACP layer3+4 bonding
+BONDING_OPTS="mode=802.3ad miimon=80 xmit_hash_policy=layer3+4"

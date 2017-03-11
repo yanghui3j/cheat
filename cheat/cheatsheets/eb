@@ -26,3 +26,9 @@ eb init helloeb --profile staging
 
 # Retrive system logs from Instances
 eb logs
+
+# Shows the environment variables
+eb printenv
+
+# Gets environment information and status
+eb status

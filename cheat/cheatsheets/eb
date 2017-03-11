@@ -19,13 +19,10 @@ eb deploy
 eb use helloeb-production
 eb deploy
 
-## Create a staging credential profile
-aws configure --profile staging
-
-## Create a production credential profile
-aws configure --profile production
-
 ## Using existing profile in .aws/config and .aws/credentials, you can run the following
 ## command to switch to the application and environment
 ## This will prompts for region and environment, if credentials are already setup
 eb init helloeb --profile staging
+
+# Retrive system logs from Instances
+eb logs

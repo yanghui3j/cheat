@@ -15,3 +15,12 @@ aws configure --profile staging
 
 ## Create a production credential profile
 aws configure --profile production
+
+# List the AWS CLI configuration data
+aws configure list [--profile profile-name]
+
+# Get a configuration value from the config file
+aws configure get varname [--profile profile-name]
+
+# Set a configuration value from the config file
+aws configure set varname value [--profile profile-name]

@@ -24,3 +24,9 @@ aws configure get varname [--profile profile-name]
 
 # Set a configuration value from the config file
 aws configure set varname value [--profile profile-name]
+
+# Synchronize MFA devices, Virtual MFA device: specify Amazon Resource Name (ARN) of device as SerialNumber
+aws iam resync-mfa-device --user-name Bob --serial-number arn:aws:iam::123456789012:mfa/BobsMFA --authentication-code-1 123456 --authentication-code-2 987654
+
+
+

@@ -58,3 +58,5 @@ mysql> source db_backup.dump;
 # Skip password for 'mysql', adding the following line to the [mysqld] section, then restart mysqld will allow you to run mysql without password
 skip-grant-tables
 
+# Check the mysql master/slave replication status
+show slave status

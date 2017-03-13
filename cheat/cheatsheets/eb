@@ -5,6 +5,10 @@
 # CONFIGURE EB CLI
 # http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-configuration.html
 
+# Retrive help messages for eb commands
+eb subcommand -h
+eb subcommand --help
+
 # Create an Elastic Beanstalk Application
 eb init
 
@@ -32,3 +36,4 @@ eb printenv
 
 # Gets environment information and status
 eb status
+

@@ -31,3 +31,14 @@ aws iam resync-mfa-device --user-name Bob --serial-number arn:aws:iam::123456789
 # Check the content of S3 bucket
 aws --profile tokyo s3 ls s3-bucket-name --recursive
 
+# Rename a foler in S3
+aws --profile profile s3 mv s3://staging/static s3://staging/assets --recursive
+
+# Sync local files to S3 bucket
+aws --profile tokyo s3 sync wwwroot/assets s3://staging
+
+# Remove a folder on S3
+aws --profile tokyo s3 rm s3://staging/zh-CN/ --recursive
+
+# Remove a folder from S3 bucket, if there is space in the folder name, use quotes
+aws --profile tokyo s3 rm "s3://owps-staging/new folder" --recursive

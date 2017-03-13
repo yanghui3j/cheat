@@ -41,4 +41,4 @@ aws --profile tokyo s3 sync wwwroot/assets s3://staging
 aws --profile tokyo s3 rm s3://staging/zh-CN/ --recursive
 
 # Remove a folder from S3 bucket, if there is space in the folder name, use quotes
-aws --profile tokyo s3 rm "s3://owps-staging/new folder" --recursive
+aws --profile tokyo s3 rm "s3://staging/new folder" --recursive

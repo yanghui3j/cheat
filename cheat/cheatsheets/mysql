@@ -59,4 +59,13 @@ mysql> source db_backup.dump;
 skip-grant-tables
 
 # Check the mysql master/slave replication status
-show slave status
+show slave status;
+
+# Using SHOW PROCESSLIST to examine the list of running processes
+SHOW PROCESSLIST;
+
+
+
+
+
+

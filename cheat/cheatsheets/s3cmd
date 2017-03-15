@@ -12,5 +12,9 @@ s3cmd ls s3://g5-mongodb-backup
 # Show the MD5 hash of an asset
 s3cmd ls --list-md5 s3://g5-mongodb-backup/mongodb.2011-08-09-06.tar.gz
 
-# Set S3 bucket public access
+# Make everything in a bucket public (e.g. everyone has read access)
 s3cmd setacl s3://myexamplebucket.calvium.com/ --acl-public --recursive
+
+# Make everything in a bucket private (e.g. accessible only to the creator)
+s3cmd setacl s3://myexamplebucket.calvium.com/ --acl-private --recursive
+

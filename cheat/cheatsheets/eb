@@ -37,3 +37,5 @@ eb printenv
 # Gets environment information and status
 eb status
 
+# Deploy an existing app version to current environment
+eb deploy --version app-dc65-170315_131804

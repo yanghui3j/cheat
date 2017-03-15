@@ -195,6 +195,7 @@ cheat/cheatsheets/rpm
 cheat/cheatsheets/rpm2cpio
 cheat/cheatsheets/rss2email
 cheat/cheatsheets/rsync
+cheat/cheatsheets/s3cmd
 cheat/cheatsheets/sam2p
 cheat/cheatsheets/samba
 cheat/cheatsheets/scp

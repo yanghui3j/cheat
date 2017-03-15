@@ -43,3 +43,6 @@ openstack catalog list
 
 # Create a instance with user-data, check below link for how to use cloud config
 openstack server create --flavor c4.2xlarge --nic net-id=web-internal-net --image centos6.8-latest host-name --user-data user-data.txt
+
+# Show availability of resources in openstack
+nova hypervisor-stats

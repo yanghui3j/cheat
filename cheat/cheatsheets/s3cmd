@@ -1,4 +1,9 @@
 # NOTES for s3cmd
+# http://s3tools.org/s3cmd
+#
+# Use --configure to configure separate configuraiton file for different
+# account/region/credentials, then use -c option to choose different configuration file to
+# operate
 
 # To list your buckets:
 s3cmd ls

@@ -42,3 +42,6 @@ aws --profile tokyo s3 rm s3://staging/zh-CN/ --recursive
 
 # Remove a folder from S3 bucket, if there is space in the folder name, use quotes
 aws --profile tokyo s3 rm "s3://staging/new folder" --recursive
+
+# Delete a bucket
+aws s3 rb s3://bucket-name --force

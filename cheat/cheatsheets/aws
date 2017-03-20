@@ -45,3 +45,6 @@ aws --profile tokyo s3 rm "s3://staging/new folder" --recursive
 
 # Delete a bucket
 aws s3 rb s3://bucket-name --force
+
+# Get the account ID
+aws sts get-caller-identity --output text --query 'Account'

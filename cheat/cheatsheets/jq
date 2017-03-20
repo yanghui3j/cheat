@@ -23,3 +23,5 @@ jq '.resources[] | select(.title=="one")' <client.example.com.json
 # Use jq again to query the JSON of the current catalog, as shown in the following command
 jq .classes[] </opt/puppetlabs/puppet/cache/client_data/catalog/client.example.com.json
 
+# Access hash/list...
+cat /tmp/1.json|jq '.Reservations[0].ReservationId'

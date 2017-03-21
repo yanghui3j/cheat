@@ -25,3 +25,6 @@ jq .classes[] </opt/puppetlabs/puppet/cache/client_data/catalog/client.example.c
 
 # Access hash/list...
 cat /tmp/1.json|jq '.Reservations[0].ReservationId'
+
+# Extract complex data structure, which contains array, hash, 
+aws --profile core ec2 describe-instances --output json|jq -r '.Reservations[]|.Instances[]|.Tags[]|select(.Key=="Name")|.Value'

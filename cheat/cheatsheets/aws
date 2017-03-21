@@ -54,3 +54,5 @@ aws iam get-user
 # Use jq to list only the Arn
 aws iam list-users --output json | jq -r .Users[].Arn
 
+# List inline policies attached to role
+aws --profile profilename iam list-role-policies --role-name trust-blizzard-team

@@ -1,4 +1,9 @@
+# NOTES:
 # Pretty print the json
+#
+# https://stedolan.github.io/jq/manual/#Invokingjq
+#
+
 jq "." < filename.json
 
 # Access the value at key "foo"

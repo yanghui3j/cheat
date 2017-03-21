@@ -33,3 +33,6 @@ cat /tmp/1.json|jq '.Reservations[0].ReservationId'
 
 # Extract complex data structure, which contains array, hash, 
 aws --profile core ec2 describe-instances --output json|jq -r '.Reservations[]|.Instances[]|.Tags[]|select(.Key=="Name")|.Value'
+
+# Using regular expression to fileter
+aws --profile core ec2 describe-instances --output json|jq -r '.Reservations[]|.Instances[]|.Tags[].Value|match("usw2.*")|.string'

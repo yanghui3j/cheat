@@ -36,3 +36,6 @@ aws --profile core ec2 describe-instances --output json|jq -r '.Reservations[]|.
 
 # Using regular expression to fileter
 aws --profile core ec2 describe-instances --output json|jq -r '.Reservations[]|.Instances[]|.Tags[].Value|match("usw2.*")|.string'
+
+# To select both fields
+aws --profile profile iam get-policy-version --policy-arn arn:aws:iam::XXXXXXXXXXXXX:policy/RestrictAccessToOffice --version-id v1 --output json|jq '.PolicyVersion.Document| .Statement, .Version'

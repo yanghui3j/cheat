@@ -103,6 +103,7 @@ cheat/cheatsheets/ip
 cheat/cheatsheets/ipcs
 cheat/cheatsheets/iperf
 cheat/cheatsheets/ipmitool
+cheat/cheatsheets/ipsec
 cheat/cheatsheets/iptables
 cheat/cheatsheets/irssi
 cheat/cheatsheets/iwconfig

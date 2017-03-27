@@ -1,0 +1,4 @@
+# NOTES for ipsec/openswan/strongswan
+
+# Verify ipsec has all requirements passwd
+ipsec verify

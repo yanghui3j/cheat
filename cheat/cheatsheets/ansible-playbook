@@ -1,0 +1,4 @@
+# Notes
+
+# Use a colon to select multiple hosts
+ansible-playbook --limit '*.8:*.135' -i inventory/ipsec-hosts -b -kK plays/ipsec-vpn.yaml -vvv

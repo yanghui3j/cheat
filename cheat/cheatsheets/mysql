@@ -64,7 +64,15 @@ show slave status;
 # Using SHOW PROCESSLIST to examine the list of running processes
 SHOW PROCESSLIST;
 
+# Index the values in a column in descending order, you can add the reserved word DESC after the column name
+# https://www.tutorialspoint.com/mysql/mysql-indexes.htm
+CREATE UNIQUE INDEX AUTHOR_INDEX ON tutorials_tbl (tutorial_author DESC)
 
+# Create an index on tutorials_tbl using tutorial_author
+CREATE UNIQUE INDEX AUTHOR_INDEX ON tutorials_tbl (tutorial_author)
+
+# ANALYZE table, Just like statistics on Oracle
+ANALYZE TABLE table_name;
 
 
 

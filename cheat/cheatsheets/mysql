@@ -74,6 +74,7 @@ CREATE UNIQUE INDEX AUTHOR_INDEX ON tutorials_tbl (tutorial_author)
 # ANALYZE table, Just like statistics on Oracle
 ANALYZE TABLE table_name;
 
-
+# Displaying INDEX Information
+SHOW INDEX FROM table_name;
 
 

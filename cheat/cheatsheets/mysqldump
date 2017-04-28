@@ -34,8 +34,8 @@ mysqldump --routines --no-create-info --no-data guardian > guardian.sql
 mysql> use guardian;
 mysql> source guardian.sql
 
-# Run the following command at source host. This will dump complete database into dump.txt file
-mysqldump -u root -p database_name table_name > dump.txt
+# To export a table in SQL format to a file, use a command like this:
+mysqldump -u root -p TUTORIALS tutorials_tbl > dump.txt
 
 # Now, ftp dump.txt file on another host and use the following command. Before running this command, make sure you have created database_name on destination server.
 mysql -u root -p database_name < dump.txt

@@ -81,9 +81,12 @@ SHOW INDEX FROM table_name;
 echo 'select * from px_vote_record' | mysql -h owps.c5g8moqwsebg.rds.cn-north-1.amazonaws.com.cn -u root -p owwc_prod > output.txt
 
 # Save query into a file, you need the following steps
+## Grant FILE to user
+UPDATE user SET File_priv = 'Y' WHERE User = 'root';
+## Or run: 
+GRANT FILE ON *.* TO 'john'@'localhost';
 ## Check the  secure_file option
 SHOW VARIABLES LIKE "secure_file_priv";
 ## Option 1: Move your file to the directory specified by secure-file-priv
 ## Option 2: Disable secure-file-priv. This must be removed from startup and cannot be modified dynamically. To do this check your MySQL start up parameters (depending on platform) and my.ini
-
 

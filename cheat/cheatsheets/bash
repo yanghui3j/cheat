@@ -28,3 +28,9 @@ echo ${PIPESTATUS[0]}  # replace 0 with N
 
 # Write to a command's STDIN
 echo ls |bash
+
+# Extract last Character in a string
+echo ${str:${#str} - $n}
+echo ${x: -1}
+echo "The quick brown fox jump over the lazy dog" | tail -c 2
+

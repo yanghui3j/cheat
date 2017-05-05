@@ -78,7 +78,7 @@ ANALYZE TABLE table_name;
 SHOW INDEX FROM table_name;
 
 # Save all data of table into a file
-echo 'select * from px_vote_record' | mysql -h owps.c5g8moqwsebg.rds.cn-north-1.amazonaws.com.cn -u root -p owwc_prod > output.txt
+echo 'select * from px_vote_record' | mysql -h mysql.c5g8moqwsebg.rds.cn-north-1.amazonaws.com.cn -u root -p dbname > output.txt
 
 # Save query into a file, you need the following steps
 ## Grant FILE to user

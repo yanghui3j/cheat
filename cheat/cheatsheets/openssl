@@ -47,6 +47,17 @@ openssl x509 -in certificate.crt -text -noout
 # Check a PKCS#12 file (.pfx or .p12)
 openssl pkcs12 -info -in keyStore.p12
 
+# Verify the Certificate Signer Authority
+openssl x509 -in certfile.pem -noout -issuer -issuer_hash
+
+# Check Hash Value of A Certificate
+openssl x509 -noout -hash -in bestflare.pem
+
+# Convert DER to PEM format
+openssl x509 –inform der –in sslcert.der –out sslcert.pem
+
+# Convert PEM to DER format
+openssl x509 –outform der –in sslcert.pem –out sslcert.der
 
 
 

@@ -28,3 +28,25 @@ openssl dhparam -outform PEM -out dhparams.pem 2048
 
 # Generate a password
 openssl rand -hex 10
+
+# Generate a certificate signing request (CSR) for an existing private key
+openssl req -out CSR.csr -key privateKey.key -new
+
+# Generate a certificate signing request based on an existing certificate
+openssl x509 -x509toreq -in certificate.crt -out CSR.csr -signkey privateKey.key
+
+# Remove a passphrase from a private key
+openssl rsa -in privateKey.pem -out newPrivateKey.pem
+
+# Check a private key
+openssl rsa -in privateKey.key -check
+
+# Check a certificate
+openssl x509 -in certificate.crt -text -noout
+
+# Check a PKCS#12 file (.pfx or .p12)
+openssl pkcs12 -info -in keyStore.p12
+
+
+
+

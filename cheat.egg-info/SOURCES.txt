@@ -100,6 +100,7 @@ cheat/cheatsheets/hub
 cheat/cheatsheets/ifconfig
 cheat/cheatsheets/indent
 cheat/cheatsheets/inq
+cheat/cheatsheets/iostat
 cheat/cheatsheets/ip
 cheat/cheatsheets/ipcs
 cheat/cheatsheets/iperf

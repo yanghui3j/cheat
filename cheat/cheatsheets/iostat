@@ -1,0 +1,2 @@
+# Show extended statistics
+iostat -mx 3

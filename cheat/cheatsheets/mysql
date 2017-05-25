@@ -90,3 +90,5 @@ SHOW VARIABLES LIKE "secure_file_priv";
 ## Option 1: Move your file to the directory specified by secure-file-priv
 ## Option 2: Disable secure-file-priv. This must be removed from startup and cannot be modified dynamically. To do this check your MySQL start up parameters (depending on platform) and my.ini
 
+# Change the current state of a variable, you can do so easily with a command similar to this one
+SET GLOBAL max_connect_errors=10000;

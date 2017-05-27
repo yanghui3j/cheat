@@ -11,3 +11,9 @@ rndc querylog
 # /var/db/nscd, When you stop nscd, these files will just stay there, so restarting really
 # doesn't flush your nscd caches. need to run the following command
 nscd --invalidate=hosts
+
+# Testing AXFR with host command
+host -t axfr domain.name dns-server
+
+# Testing AXFR with dig command
+dig axfr @dns-server domain.name

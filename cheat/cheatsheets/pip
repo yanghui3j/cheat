@@ -1,3 +1,6 @@
+# For a complete user guide of PIP see here
+# https://pip.pypa.io/en/stable/reference/pip_install/
+ 
 # Search for packages
 pip search SomePackage
 
@@ -10,9 +13,20 @@ pip install --user SomePackage
 # Upgrade some package
 pip install --upgrade SomePackage
 
+# Install SomePackage and its dependencies from PyPI using Requirement Specifiers
+pip install SomePackage            # latest version
+pip install SomePackage==1.0.4     # specific version
+pip install 'SomePackage>=1.0.4'     # minimum version
+
 # Output and install packages in a requirement file
 pip freeze > requirements.txt
+
+# Install a list of requirements specified in a file
 pip install -r requirements.txt
+
+# Install a local project in "editable" mode
+pip install -e .                     # project in current directory
+pip install -e path/to/project       # project in another directory
 
 # Show details of a package
 pip show SomePackage
@@ -27,6 +41,6 @@ pip freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip install -U
 pip install -I SomePackage1==1.1.0 'SomePackage2>=1.0.4'
 
 
-[ISSUEs]
+## [ISSUEs]
 1) **** AttributeError: 'module' object has no attribute 'HAVE_DECL_MPZ_POWM_SEC'
 pip install pycrypto-on-pypi

@@ -24,3 +24,13 @@ lvcreate -l 50%FREE -n lv_nfs_data vg_nfs_data
 
 # Create LV with 100% free space on VG
 lvcreate -l 100%FREE -n lv_nfs_home vg_nfs_data
+
+# Show more information about lvm
+pvs -o pv_all
+lvs -o lv_all 
+vgs -o vg_all
+
+# Show more information about lvm's specific attribute
+pvs -o +tags
+lvs -o +tags
+vgs -o +tags

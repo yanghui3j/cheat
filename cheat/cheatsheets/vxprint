@@ -1,0 +1,4 @@
+# NOTES for veritas
+
+# To print the layout of myvol
+vxprint -g mydg -htr

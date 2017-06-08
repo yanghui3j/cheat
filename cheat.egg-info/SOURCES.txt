@@ -259,6 +259,7 @@ cheat/cheatsheets/vagrant
 cheat/cheatsheets/vi
 cheat/cheatsheets/vim
 cheat/cheatsheets/virtualenv
+cheat/cheatsheets/vxprint
 cheat/cheatsheets/weechat
 cheat/cheatsheets/wget
 cheat/cheatsheets/xargs

@@ -1,4 +1,5 @@
 # NOTES for veritas
+http://www.datadisk.co.uk/html_docs/veritas/veritas_lvm_cs.htm
 
 # To print the layout of myvol
 vxprint -g mydg -htr

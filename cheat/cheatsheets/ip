@@ -62,4 +62,10 @@ ip route list table local
 # Show all rules
 ip rule list
 
+# Displaying the routing cache with ip route show cache
+ip route show cache 192.168.100.17
+
+
+
+
 

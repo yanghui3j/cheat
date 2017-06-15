@@ -54,3 +54,12 @@ ip netns exec qdhcp-33924736-77b3-420d-b0e8-aaa4c8476d54 netstat -tuan
 
 # Check a routing table in a given namespace
 ip netns exec qdhcp-33924736-77b3-420d-b0e8-aaa4c8476d54 ip route
+
+# Show route entries for specific table
+ip route list table 10
+ip route list table local
+
+# Show all rules
+ip rule list
+
+

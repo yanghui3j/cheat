@@ -24,3 +24,6 @@ diff <(command1) <(command2)
 
 # Generate a patch file from two files
 diff -Naur version1 version2 > version.patch
+
+# Create a Patch From a Source Tree
+diff -Naur /usr/src/openvpn-2.3.2 /usr/src/openvpn-2.3.4 > openvpn.patch

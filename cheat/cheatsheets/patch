@@ -14,3 +14,12 @@ patch -p1 -r version1/ < version.patch
 
 # Apply Patch File to a Source Code Tree
 patch -p3 < /root/openvpn.patch
+
+# Take a Backup before Applying the Patch using -b
+patch -b < hello.patch
+
+# Validate the Patch without Applying (Dry-run Patch File)
+patch --dry-run < hello.patch
+
+# Reverse a Patch that is Already Applied (Undo a Patch)
+patch < hello.patch

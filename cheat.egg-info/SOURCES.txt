@@ -19,6 +19,7 @@ cheat/cheatsheets/__init__.py
 cheat/cheatsheets/ab
 cheat/cheatsheets/ansi
 cheat/cheatsheets/ansible
+cheat/cheatsheets/ansible-galaxy
 cheat/cheatsheets/ansible-playbook
 cheat/cheatsheets/apk
 cheat/cheatsheets/apparmor

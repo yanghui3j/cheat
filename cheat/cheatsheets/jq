@@ -39,3 +39,6 @@ aws --profile core ec2 describe-instances --output json|jq -r '.Reservations[]|.
 
 # To select both fields
 aws --profile profile iam get-policy-version --policy-arn arn:aws:iam::XXXXXXXXXXXXX:policy/RestrictAccessToOffice --version-id v1 --output json|jq '.PolicyVersion.Document| .Statement, .Version'
+
+# Get public address of all matching instances
+aws --profile cn-company-core ec2 describe-instances  |jq '.Reservations[].Instances[]|select(.Tags[].Value|match(".*vpn.*"))|.PublicIpAddress'

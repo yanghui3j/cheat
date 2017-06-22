@@ -1,0 +1,10 @@
+# NOTEs
+# Sending mails with mail cli
+
+# You just need to add a From: header. By default there is none.
+echo "Test" | mail -a "From: Someone <someone@example.com>" other@example.com
+
+# You can add any custom headers using -a.
+echo "Test" | mail -a "From: Someone <someone@example.com>" \
+                   -a "Subject: This is a test" \
+                   -a "X-Custom-Header: yes" other@example.com

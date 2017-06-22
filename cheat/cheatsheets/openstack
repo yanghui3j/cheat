@@ -46,3 +46,9 @@ openstack server create --flavor c4.2xlarge --nic net-id=web-internal-net --imag
 
 # Show availability of resources in openstack
 nova hypervisor-stats
+
+# List all aggregates
+aggregate list
+
+# Display aggregate details
+aggregate show

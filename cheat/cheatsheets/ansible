@@ -5,3 +5,6 @@ ansible <hostname> -m setup -a "filter=ansible_local"
 
 # Specify host in command line, comma separated
 ansible all -i "host1,host2" -kK -b -m shell -a 'ifconfig'
+
+# use -l to limit hosts in the inventory file
+ansible all -i hosts.infra -l '*ldap*' -kK -b -m shell -a 'df -hPT' -f 10

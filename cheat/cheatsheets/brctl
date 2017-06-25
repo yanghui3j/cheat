@@ -46,3 +46,23 @@ ip link show
 
 # Delete Layer 2 general devices
 ip link delete [DEVICENAME] type [TYPE]
+
+# Troubleshooting Bridge Is not Passing Traffic
+# https://support.cumulusnetworks.com/hc/en-us/articles/205050358-Troubleshooting-Bridges-VLANs-
+brctl show br-untagged
+ip link show br-untagged
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

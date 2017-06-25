@@ -1,0 +1,13 @@
+# NOTEs for virsh
+
+# List Domains
+virsh list
+
+# Display doamin info
+virsh dominfo 457
+
+# Print a table showing the brief information of all virtual interfaces associated with domain
+virsh domiflist 457
+
+# Get a list of interfaces of a running domain along with their IP and MAC addresses, or limited output just for one interface if interface is specified.
+virsh domifaddr 457

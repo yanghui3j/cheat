@@ -1,0 +1,8 @@
+# NOTEs for ebtables
+# 
+
+# If the ebtables command is available then you can view the rulebase using the -L option. For example, for the filter table
+ebtables -t filter -L
+
+# If the rulebase is non-empty then you can obtain some insight into what effect it might be having by inspecting the counters associated with each rule
+ebtables -t filter -L --Lc

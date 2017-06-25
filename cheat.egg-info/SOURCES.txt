@@ -70,6 +70,7 @@ cheat/cheatsheets/docker
 cheat/cheatsheets/dpkg
 cheat/cheatsheets/du
 cheat/cheatsheets/eb
+cheat/cheatsheets/ebtables
 cheat/cheatsheets/emacs
 cheat/cheatsheets/ethtool
 cheat/cheatsheets/fab
@@ -260,6 +261,7 @@ cheat/cheatsheets/uuid
 cheat/cheatsheets/vagrant
 cheat/cheatsheets/vi
 cheat/cheatsheets/vim
+cheat/cheatsheets/virsh
 cheat/cheatsheets/virtualenv
 cheat/cheatsheets/vxprint
 cheat/cheatsheets/weechat

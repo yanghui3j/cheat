@@ -11,3 +11,7 @@ virsh domiflist 457
 
 # Get a list of interfaces of a running domain along with their IP and MAC addresses, or limited output just for one interface if interface is specified.
 virsh domifaddr 457
+
+# Find vm name, then find IP with the name
+virsh dumpxml instance-00077d2b
+

@@ -1,0 +1,6 @@
+# NOTEs for ovs-appctl
+# 
+
+# To view the MAC address table, you can use ‘ovs-appctl fdb/show’ on a ovs bridge
+ovs-appctl fdb/show br-int
+

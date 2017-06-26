@@ -59,3 +59,7 @@ ssh-add XXX.pem
 ssh -A ec2-user@IP
 ## ssh to target server with out input password or key
 ssh ec2-user@VM_IP
+
+# Fix error: sign_and_send_pubkey: signing failed: agent refused operation
+eval "$(ssh-agent -s)"
+ssh-add

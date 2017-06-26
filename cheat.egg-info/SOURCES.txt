@@ -165,6 +165,7 @@ cheat/cheatsheets/openssl
 cheat/cheatsheets/openstack
 cheat/cheatsheets/openstack-config
 cheat/cheatsheets/org-mode
+cheat/cheatsheets/ovs-appctl
 cheat/cheatsheets/ovs-vsctl
 cheat/cheatsheets/p4
 cheat/cheatsheets/pacman

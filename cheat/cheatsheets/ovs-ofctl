@@ -1,0 +1,10 @@
+# NOTEs for ovs-ofctl
+
+# Prints information on the bridge, its ports and flow table
+ovs-ofctl show br-ex
+
+# Prints all the flows in 'my_bridge' flow table
+ovs-ofctl dump-flows br-int
+
+# Add a new flow
+ovs-ofctl add-flow my_Bridge action=normal

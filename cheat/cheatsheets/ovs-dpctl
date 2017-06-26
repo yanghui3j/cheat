@@ -1,0 +1,10 @@
+# NOTEs for ovs-dpctl
+
+# Add a new data path
+ovs-dpctl add-dp my_dp
+
+# Adds existing interface to the specified data path
+ovs-dpctl add-if my_dp eth0
+
+# Prints summary of the data paths and theirs ports
+ovs-dpctl show

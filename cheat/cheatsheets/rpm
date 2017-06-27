@@ -47,3 +47,6 @@ rpm -q --last package-name
 
 # Show time-stamp for all package 
 rpm -qa --last
+
+# rpm db corruption fix
+https://access.redhat.com/solutions/6903

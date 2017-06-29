@@ -62,11 +62,16 @@ openstack catalog list
 # Check the cells and placement API are working successfully
 nova-status upgrade check
 
-# Disable a nova service
-openstack compute service set --disable --disable-reason trial log nova nova-compute
+# check the ops guide for more details --  https://docs.openstack.org/ops-guide/ops-maintenance-compute.html
+# Disable a nova service, Disable scheduling of new VMs to the node, optionally providing a reason comment
+openstack compute service set --disable --disable-reason maintenance c01.example.com nova-compute
 
 # Enable the nova service
 openstack compute service set --enable nova nova-compute
+
+
+
+
 
 
 

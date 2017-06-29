@@ -52,3 +52,12 @@ aggregate list
 
 # Display aggregate details
 aggregate show
+
+# List service components to verify successful launch and registration of each process
+openstack compute service list
+
+# List API endpoints in the Identity service to verify connectivity with the Identity service
+openstack catalog list
+
+# Check the cells and placement API are working successfully
+nova-status upgrade check

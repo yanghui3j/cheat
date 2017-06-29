@@ -1,0 +1,5 @@
+# NOTEs for openstack cinder
+
+# Delete a volume in bad state
+update volumes set attach_status='detached', status='available' where id='6864da0c-4eab-4691-843f-3f6919ad41c6';
+cinder delete 6864da0c-4eab-4691-843f-3f6919ad41c6

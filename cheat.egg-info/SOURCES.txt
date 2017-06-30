@@ -43,6 +43,7 @@ cheat/cheatsheets/cheat
 cheat/cheatsheets/chmod
 cheat/cheatsheets/chown
 cheat/cheatsheets/cibadmin
+cheat/cheatsheets/cinder
 cheat/cheatsheets/cisco
 cheat/cheatsheets/cman_tool
 cheat/cheatsheets/convert

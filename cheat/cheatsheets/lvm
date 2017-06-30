@@ -35,4 +35,5 @@ pvs -o +tags
 lvs -o +tags
 vgs -o +tags
 
-# LVM Loopback HOW-TO: http://www.anthonyldechiaro.com/blog/2010/12/19/lvm-loopback-how-to/
+# LVM Loopback HOW-TO
+http://www.anthonyldechiaro.com/blog/2010/12/19/lvm-loopback-how-to/

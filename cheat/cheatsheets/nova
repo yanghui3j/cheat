@@ -122,3 +122,14 @@ nova aggregate-update <id> <name> [<availability_zone>]
 nova host-update --maintenance [enable | disable]
 nova host-update compute-01 --maintenance enable
 
+# Find Inconsistencies in the Nova Database, This outputs the difference between virtual
+# machines known to Nova and that currently running under libvirt on node r000099m004
+diff <(nova hypervisor-servers r000099m004 | grep instance | cut -d '|' -f 3 | tr -d ' ' | sort) \  
+    <(ssh r000099m004 "sudo virsh list --all --name" | grep instance | tr -d ' ' | sort)
+
+# To query this diff for all hypervisors, use a for loop over the output of nova host-list 
+for host in $(nova host-list | grep nova | cut -d '|' -f 2 | tr -d ' ' | sort); do \  
+        echo "$host:"; \
+        diff <(nova hypervisor-servers $host | grep instance | cut -d '|' -f 3 | tr -d ' ' | sort) \
+            <(ssh $host "sudo virsh list --all --name" | grep instance | tr -d ' ' | sort); \
+done

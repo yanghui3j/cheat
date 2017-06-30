@@ -7,17 +7,8 @@
 # List tenant
 keystone tenant-list
 
-# List Flavor
-nova flavor-list
-
-# List image
-nova image-list
-
 # Boot a new instance
 OS_TENANT_NAME=staging nova boot --flavor bn1.small --image centos-5.10-201401301424 instance-name
-
-# List VMs running on the specified compute node
-nova list --all-tenants --host openstack-compute20
 
 # Finding VM Instances by Compute Node
 1. source the openrc file
@@ -44,9 +35,6 @@ openstack catalog list
 # Create a instance with user-data, check below link for how to use cloud config
 openstack server create --flavor c4.2xlarge --nic net-id=web-internal-net --image centos6.8-latest host-name --user-data user-data.txt
 
-# Show availability of resources in openstack
-nova hypervisor-stats
-
 # List all aggregates
 aggregate list
 
@@ -58,9 +46,6 @@ openstack compute service list
 
 # List API endpoints in the Identity service to verify connectivity with the Identity service
 openstack catalog list
-
-# Check the cells and placement API are working successfully
-nova-status upgrade check
 
 # check the ops guide for more details --  https://docs.openstack.org/ops-guide/ops-maintenance-compute.html
 # Disable a nova service, Disable scheduling of new VMs to the node, optionally providing a reason comment

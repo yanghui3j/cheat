@@ -1,8 +1,23 @@
 [NOTES]
 Need environment variables setup before using the clis
 
+# List Flavor
+nova flavor-list
+
+# List image
+nova image-list
+
 # To list VMs on current tenant:
 nova list
+
+# List VMs running on the specified compute node
+nova list --all-tenants --host openstack-compute20
+
+# Show availability of resources in openstack
+nova hypervisor-stats
+
+# Check the cells and placement API are working successfully
+nova-status upgrade check
 
 # To list VMs of all tenants (admin user only):
 nova list --all-tenants

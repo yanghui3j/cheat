@@ -1,0 +1,4 @@
+# Virtualbox CLI
+
+# Start a VM
+vboxmanage startvm devstack --type headless

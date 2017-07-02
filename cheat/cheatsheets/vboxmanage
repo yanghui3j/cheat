@@ -1,4 +1,9 @@
 # Virtualbox CLI
+# vboxmanage help for the manual
 
 # Start a VM
 vboxmanage startvm devstack --type headless
+
+# Stop a VM
+vboxmanage controlvm devstack poweroff
+

@@ -263,6 +263,7 @@ cheat/cheatsheets/unzip
 cheat/cheatsheets/urpm
 cheat/cheatsheets/uuid
 cheat/cheatsheets/vagrant
+cheat/cheatsheets/vboxmanage
 cheat/cheatsheets/vi
 cheat/cheatsheets/vim
 cheat/cheatsheets/virsh

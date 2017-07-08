@@ -63,6 +63,12 @@ puppet parser validate test.pp
 # restore a file with md5 as ee6e8ff6f94123838a6d6df1514af3c0 in clientbucket from the local copy
 puppet filebucket restore --local --bucket /opt/puppetlabs/puppet/cache/clientbucket/ /usr/local/bin/plugins/check_ipmi ee6e8ff6f94123838a6d6df1514af3c0 --environment=production
 
+# Find the puppet configurations
+puppet config print |grep codedir
+
+
+
+
 
 
 

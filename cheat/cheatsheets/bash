@@ -34,3 +34,15 @@ echo ${str:${#str} - $n}
 echo ${x: -1}
 echo "The quick brown fox jump over the lazy dog" | tail -c 2
 
+# Closing file descriptors
+# Close input file descriptor n.
+n<&-
+
+# Close stdin.
+0<&-, <&-
+
+# Close output file descriptor n.
+n>&-
+
+# Close stdout.
+1>&-, >&-

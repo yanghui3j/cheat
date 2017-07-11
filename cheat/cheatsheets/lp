@@ -1,10 +1,26 @@
 # NOTES for printer in linux
 
-# print files
+# Print files
 lp FILENAME
 
-# print files
+# Print files
 lpr FILENAME
 
 # List all available printers
 lpstat -p
+
+# The question was how to kill all jobs. The simple way to kill all jobs:
+lprm -
+
+# To view outstanding print jobs
+lpstat -o
+
+# To cancel ALL jobs or ...
+cancel -a {printer}
+
+# To cancel 1 job.
+cancel {printerjobid}
+
+
+
+

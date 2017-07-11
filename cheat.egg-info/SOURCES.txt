@@ -123,6 +123,7 @@ cheat/cheatsheets/ldapvi
 cheat/cheatsheets/less
 cheat/cheatsheets/lib
 cheat/cheatsheets/ln
+cheat/cheatsheets/lp
 cheat/cheatsheets/ls
 cheat/cheatsheets/lshw
 cheat/cheatsheets/lsinitrd

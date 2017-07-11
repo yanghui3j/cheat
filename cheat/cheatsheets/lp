@@ -1,0 +1,10 @@
+# NOTES for printer in linux
+
+# print files
+lp FILENAME
+
+# print files
+lpr FILENAME
+
+# List all available printers
+lpstat -p

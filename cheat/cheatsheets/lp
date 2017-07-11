@@ -18,8 +18,14 @@ lpstat -o
 # To cancel ALL jobs or ...
 cancel -a {printer}
 
-# To cancel 1 job.
+# To cancel 1 job
 cancel {printerjobid}
+
+# To view list of completed jobs
+lpstat -W completed -o
+
+
+
 
 
 

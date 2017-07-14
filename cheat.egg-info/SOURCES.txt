@@ -102,6 +102,7 @@ cheat/cheatsheets/http
 cheat/cheatsheets/hub
 cheat/cheatsheets/ifconfig
 cheat/cheatsheets/indent
+cheat/cheatsheets/initramfs
 cheat/cheatsheets/inq
 cheat/cheatsheets/iostat
 cheat/cheatsheets/ip

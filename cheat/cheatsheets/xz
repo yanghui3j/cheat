@@ -22,3 +22,6 @@ find . | cpio -o -H newc | xz --check=crc32 --x86 --lzma2=dict=512KiB > ../initr
 
 # Extract a *.xz file, is equivalent to xz --decompress
 unxz FILENAME.xz
+
+# The new procedure in Red Hat Enterprise Linux 7 is
+/usr/lib/dracut/skipcpio /boot/initramfs-3.10.0-327.4.4.el7.x86_64.img | gunzip -c | cpio -i -d

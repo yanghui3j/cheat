@@ -1,4 +1,5 @@
 # NOTES for initramfs
+# http://backreference.org/2010/07/04/modifying-initrdinitramfs-files/
 
 # For image compressed with gzip
 mkdir test

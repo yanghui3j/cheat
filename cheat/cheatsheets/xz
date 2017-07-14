@@ -25,3 +25,9 @@ unxz FILENAME.xz
 
 # The new procedure in Red Hat Enterprise Linux 7 is
 /usr/lib/dracut/skipcpio /boot/initramfs-3.10.0-327.4.4.el7.x86_64.img | gunzip -c | cpio -i -d
+
+# To decompress an image, use the xz -d command
+xz -dc initrd.img | cpio -id
+
+# To compress an image, use the xz -9 --format=lzma command
+find . | cpio -c -o | xz -9 --format=lzma > initrd.img

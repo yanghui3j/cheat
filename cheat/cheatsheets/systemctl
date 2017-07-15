@@ -1,4 +1,8 @@
 # List all loaded/active units
+
+# Run if .service file has changed
+systemctl daemon-reload
+
 systemctl list-units
 
 # List usable unit

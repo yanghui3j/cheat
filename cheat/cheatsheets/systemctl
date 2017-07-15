@@ -1,7 +1,8 @@
 # List all loaded/active units
 
-# Run if .service file has changed
+# Restarting/reloading, Run if .service file has changed
 systemctl daemon-reload
+systemctl restart
 
 systemctl list-units
 

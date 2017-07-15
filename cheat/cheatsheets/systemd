@@ -16,3 +16,17 @@ systemctl <start | stop> foo.service
 # Unit file locations
 /etc/systemd/system
 /usr/lib/systemd/system
+
+# Show the critical chain
+systemd-analyze critical-chain
+
+# Analyze service chain
+systemd-analyze critical-chain cron.service
+
+# List control group
+systemd-cgls
+
+# List cg by CPU/RAM...
+systemd-cgtop
+
+

@@ -35,15 +35,6 @@ systemctl list-units --type=target
 # Change current target
 systemctl isolate foo.target
 
-# Analyze startup process
-systemd-analyze
-
-# Show startup time for each process
-systemd-analyze blame
-
-# Show the critical chain
-systemd-analyze critical-chain
-
 # List usable unit
 systemctl list-unit-files
 
@@ -103,15 +94,6 @@ systemctl show -p CPUShares dbus.socket
 
 # Show service configurations
 systemctl show cron
-
-# Analyze service chain
-systemd-analyze critical-chain cron.service
-
-# List control group
-systemd-cgls
-
-# List cg by CPU/RAM...
-systemd-cgtop
 
 # Enter to rescue mode
 systemctl rescue

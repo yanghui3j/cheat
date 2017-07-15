@@ -1,6 +1,61 @@
 # List all loaded/active units
 systemctl list-units
 
+# List usable unit
+systemctl list-unit-files
+
+# List all usable socket
+systemctl list-unit-files --type=socket
+
+# List all mounted
+systemctl list-unit-files --type=mount
+
+# List all services
+systemctl list-unit-files --type=service
+
+# List all running units with type of service
+systemctl list-units --type=service
+
+# List failed units
+systemctl list-units --failed
+
+# List currently loaded targets
+systemctl list-units --type=target
+
+# List all diabled units
+systemctl list-units --all --state=inactive
+systemctl list-units --type service --all --state=inactive
+
+# Change current target
+systemctl isolate foo.target
+
+# List all failed unit
+systemctl --failed
+
+# Check is unit enabled
+systemctl is-enabled crond.service
+
+# Check is a service is running or not
+systemctl status firewalld.service
+
+# Mask/Unmask service, make it not startup
+systemctl mask dnsmasq.service
+systemctl unmask httpd.service
+
+# Kill services
+systemctl kill httpd
+
+# mount/umount/re-mount mount points
+systemctl start tmp.mount
+systemctl stop tmp.mount
+systemctl restart tmp.mount
+systemctl reload tmp.mount
+systemctl status tmp.mount
+
+# Control sockets
+systemctl start cups.socket
+systemctl restart cups.socket
+systemctl stop cups.socket
 # Check the status of a service
 systemctl status foo.service
 
@@ -19,6 +74,9 @@ systemctl reload foo.service
 # activate service during bootup
 systemctl is-active httpd.service
 
+# Check if service is in failed state
+systemctl is-failed application.service
+
 # Enable a service to startup on boot
 systemctl enable foo.service
 
@@ -29,51 +87,6 @@ systemctl disable foo.service
 # when no service name is specified, lists the dependencies of default.target
 systemctl list-dependencies foo.service 
 
-# List currently loaded targets
-systemctl list-units --type=target
-
-# Change current target
-systemctl isolate foo.target
-
-# List usable unit
-systemctl list-unit-files
-
-# List all failed unit
-systemctl --failed
-
-# Check is unit enabled
-systemctl is-enabled crond.service
-
-# Check is a service is running or not
-systemctl status firewalld.service
-
-# List all services
-systemctl list-unit-files --type=service
-
-# Mask/Unmask service, make it not startup
-systemctl mask dnsmasq.service
-systemctl unmask httpd.service
-
-# Kill services
-systemctl kill httpd
-
-# List all mounted
-systemctl list-unit-files --type=mount
-
-# mount/umount/re-mount mount points
-systemctl start tmp.mount
-systemctl stop tmp.mount
-systemctl restart tmp.mount
-systemctl reload tmp.mount
-systemctl status tmp.mount
-
-# List all usable socket
-systemctl list-unit-files --type=socket
-
-# Control sockets
-systemctl start cups.socket
-systemctl restart cups.socket
-systemctl stop cups.socket
 systemctl reload cups.socket
 systemctl status cups.socket
 
@@ -136,7 +149,17 @@ systemctl hybrid-sleep
 # Control remote system via ssh
 systemctl --host user_name@host_name command
 systemctl -H user_name@host_name command
+systemctl -H root@rhel7.example.com status httpd.service
 
+# Setting services on bootup
+systemctl enable name.service
+systemctl disable name.service
+systemctl mask name.service
+systemctl unmask name.service
+systemctl cat name.service
+systemctl edit name.service
+systemctl show name.service
+systemctl show name.service -p property
 
 
 

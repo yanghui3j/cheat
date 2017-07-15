@@ -161,8 +161,9 @@ systemctl edit name.service
 systemctl show name.service
 systemctl show name.service -p property
 
-
-
+# List all dependencies of a unit
+systemctl list-dependencies nginx.service
+systemctl list-dependencies --all nginx.service
 
 
 

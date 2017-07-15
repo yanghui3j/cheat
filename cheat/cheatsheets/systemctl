@@ -166,6 +166,23 @@ systemctl list-dependencies nginx.service
 systemctl list-dependencies --all nginx.service
 
 
+# Show all targets
+systemctl list-unit-files --type=target
+
+# Show all units of a target
+systemctl list-dependencies multi-user.target
+
+# Show default target for bootup
+systemctl get-default
+
+# Set default target for bootup
+systemctl set-default multi-user.target
+
+# Switch target, but not stop previous target
+systemctl isolate
+
+# Shut processes belong to previous target but does not belong to later target
+systemctl isolate multi-user.target
 
 
 

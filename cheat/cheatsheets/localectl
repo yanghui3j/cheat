@@ -1,0 +1,12 @@
+# NOTEs for localectl
+
+# Show locale information
+localectl
+localectl status
+localectl list-locales
+localectl list-keymaps
+
+# Set locale settings
+localectl set-locale LANG=en_GB.utf8
+localectl set-keymap en_GB
+localectl set-x11-keymap en_GB

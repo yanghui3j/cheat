@@ -118,6 +118,9 @@ systemctl condrestart foo.service
 # Reboot system
 systemctl reboot
 
+# Halt system
+systemctl halt
+
 # Poweroff System
 systemctl poweroff
 
@@ -126,5 +129,24 @@ systemctl suspend
 
 # Hibernate System
 systemctl Hibernate
+
+# Enter interactive sleeping state
+systemctl hybrid-sleep
+
+# Control remote system via ssh
+systemctl --host user_name@host_name command
+systemctl -H user_name@host_name command
+
+
+
+
+
+
+
+
+
+
+
+
 
 

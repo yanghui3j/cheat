@@ -1,0 +1,12 @@
+# NOTES for login
+
+# List current sessions
+loginctl list-sessions
+
+# List current logged in users
+loginctl list-users
+
+# Show specified user info
+loginctl show-user tom
+
+

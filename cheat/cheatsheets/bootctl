@@ -1,0 +1,8 @@
+# Show booting related info
+bootctl status
+bootctl update
+bootctl install
+bootctl remove
+
+
+

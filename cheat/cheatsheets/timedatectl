@@ -1,0 +1,31 @@
+# NOTES OF timedatectl
+
+# Show current time zone
+timedatectl
+
+# List all available timezones
+timedatectl list-timezones                                                                                   
+
+# Show current date and time
+timedatectl status
+
+# Setting timezone
+timedatectl set-timezone America/New_York
+timedatectl set-timezone UTC
+timedatectl set-time YYYY-MM-DD
+timedatectl set-time HH:MM:SS
+timedatectl set-time 'YYYY-MM-DD HH:MM:SS'
+timedatectl set-local-rtc boolean   # yes/no
+timedatectl set-ntp boolean
+
+# Set hardware clock for UTC
+timedatectl | grep local #首先确定你的硬件时钟是否设置为本地时区
+timedatectl set-local-rtc 1 #将你的硬件时钟设置为本地时区
+timedatectl set-local-rtc 0 #将你的硬件时钟设置为协调世界时
+
+# Sync time with remote NTP server
+# 注意:你必须在系统上安装NTP以实现与NTP服务器的自动时间同步。
+timedatectl set-ntp true #自动时间同步到远程NTP服务器
+timedatectl set-ntp false #禁用NTP时间同步
+
+

@@ -1,0 +1,7 @@
+# NOTES for hostnamectl
+
+# Show hostname info
+hostnamectl
+
+# Set hostname
+hostnamectl set-hostname <hostname>

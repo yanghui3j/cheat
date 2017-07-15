@@ -29,4 +29,7 @@ systemd-cgls
 # List cg by CPU/RAM...
 systemd-cgtop
 
+# Generate a SVG for the boot process
+systemd-analyze plot > plot.svg
+
 

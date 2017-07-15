@@ -35,6 +35,7 @@ cheat/cheatsheets/awk
 cheat/cheatsheets/aws
 cheat/cheatsheets/bash
 cheat/cheatsheets/bonding
+cheat/cheatsheets/bootctl
 cheat/cheatsheets/bower
 cheat/cheatsheets/brctl
 cheat/cheatsheets/brocade
@@ -126,6 +127,7 @@ cheat/cheatsheets/less
 cheat/cheatsheets/lib
 cheat/cheatsheets/ln
 cheat/cheatsheets/localectl
+cheat/cheatsheets/loginctl
 cheat/cheatsheets/lp
 cheat/cheatsheets/ls
 cheat/cheatsheets/lshw

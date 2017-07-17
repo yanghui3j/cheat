@@ -37,3 +37,7 @@ vgs -o +tags
 
 # LVM Loopback HOW-TO
 http://www.anthonyldechiaro.com/blog/2010/12/19/lvm-loopback-how-to/
+
+# How to know if a logical volume is striped, linear or mirrored
+lvs -a -o segtype,devices
+lvs -a -o segtype,devices,lv_name,vg_name

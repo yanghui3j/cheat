@@ -46,3 +46,24 @@ n>&-
 
 # Close stdout.
 1>&-, >&-
+
+# bash test command
+# True if $a starts with an "z" (pattern matching).
+[[ $a == z* ]]
+
+# True if $a is equal to z* (literal matching).
+[[ $a == "z*" ]]
+
+# File globbing and word splitting take place.
+[ $a == z* ]
+
+# True if $a is equal to z* (literal matching).
+[ "$a" == "z*" ]
+
+
+
+
+
+
+
+

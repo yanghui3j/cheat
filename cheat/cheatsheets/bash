@@ -48,6 +48,7 @@ n>&-
 1>&-, >&-
 
 # bash test command
+# http://tldp.org/LDP/abs/html/comparison-ops.html
 # True if $a starts with an "z" (pattern matching).
 [[ $a == z* ]]
 

@@ -58,3 +58,26 @@ OR
 
 # Using Multiple repeats for adding line(s) after matching lines
 :g/^$/ s/^$/Adding a line here\r/
+
+# Working with multiple files
+:e filename - Edit a file in a new buffer
+:bnext (or :bn) - go to next buffer
+:bprev (of :bp) - go to previous buffer
+:bd - delete a buffer (close a file)
+:sp filename - Open a file in a new buffer and split window
+ctrl+ws - Split windows
+ctrl+ww - switch between windows
+ctrl+wq - Quit a window
+ctrl+wv - Split windows vertically
+
+# More Editing commands
+r - replace a single character (does not use insert mode)
+J - join line below to the current one
+cc - change (replace) an entire line
+cw - change (replace) to the end of word
+c$ - change (replace) to the end of line
+s - delete character at cursor and subsitute text
+S - delete line at cursor and substitute text (same as cc)
+xp - transpose two letters (delete and paste, technically)
+u - undo
+. - repeat last command

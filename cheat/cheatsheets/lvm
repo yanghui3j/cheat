@@ -41,3 +41,10 @@ http://www.anthonyldechiaro.com/blog/2010/12/19/lvm-loopback-how-to/
 # How to know if a logical volume is striped, linear or mirrored
 lvs -a -o segtype,devices
 lvs -a -o segtype,devices,lv_name,vg_name
+
+# The following are sample steps to extend a volume group, a logical volume, and a filesystem
+pvcreate /dev/sdc1
+vgextend vgdata /dev/sdc1
+lvextend -L +125G /dev/vgdata/lvdata
+resize2fs /dev/vgdata/lvdata
+

@@ -15,6 +15,5 @@ varnishstat -1 | grep "cache_hit \|cache_miss \|cache_hitpass"
 # Calculate the actual hitrate like this:
 cache_hit/(cache_hit + cache_miss)
 
-
-
-
+# Displays Varnish access logs in NCSA Common log format
+varnishncsa

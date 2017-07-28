@@ -1,0 +1,7 @@
+# NOTES
+
+# Show varnish backend
+varnishadm -T localhost:6082 -S /etc/varnish/secret backend.list
+
+# show active log of requested URLs, response codes, and backend that served the request
+varnishlog | egrep --line-buffered '(ReqURL|RespStatus|Backend) '

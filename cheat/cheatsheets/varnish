@@ -21,3 +21,18 @@ cache_hit/(cache_hit + cache_miss)
 # Displays Varnish access logs in NCSA Common log format
 varnishncsa
 
+# Enable inline C in VCL
+# The include statements must be outside the subroutines.
+# Adding following line in the varnish.service systemd file
+-p vcc_allow_inline_c=on
+# Then add inline C in the VCL configuration file
+C{
+        #include <syslog.h>
+        #
+}C
+sub vcl_something {
+    C{
+                    syslog(LOG_INFO, "Something happened at VCL line XX.");
+                            
+    }C
+}

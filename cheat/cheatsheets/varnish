@@ -24,6 +24,7 @@ varnishncsa
 # Enable inline C in VCL
 # The include statements must be outside the subroutines.
 # Adding following line in the varnish.service systemd file
+# http://chillibear.org/2010/05/extending-varnish-with-c-code.html
 -p vcc_allow_inline_c=on
 # Then add inline C in the VCL configuration file
 C{

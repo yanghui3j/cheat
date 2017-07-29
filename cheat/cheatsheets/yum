@@ -34,10 +34,15 @@ yum list <package_name_or_word_to_search>
  
 # To download the source RPM for a package:
 yumdownloader --source <package name>
+
 # Or sometimes, without the --source option
 yumdownloader <package name>
+
 # Or use below command to download it to specific dir
 yum install --downloadonly tcpdump --downloaddir=/tmp
+
+# Or if the package already installed
+yum --downloadonly --downloaddir=/tmp/rpm_files/ reinstall iptables-services
 
 # Show duplicates
 yum list --showduplicates BattleJournal

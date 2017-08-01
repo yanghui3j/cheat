@@ -1,0 +1,35 @@
+# NOTES for power dns
+# 
+
+# Adding or editing a new zone/domain called artemit.local and assigning a name server called ns1.artemit.local
+curl -X POST --data '{"name":"artemit.local", "kind": "Master","dnssec":false,"soa-edit":"INCEPTION-INCREMENT","masters": [], "nameservers": ["ns1.artemit.local"]}' -v -H 'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones | jq .
+
+# Adding or editing a Start Of Authority (SOA) record for the artemit.local domain. The name server is ns1.artemit.local and the contact mail address is hostmaster.artemit.com.es.
+curl -X PATCH --data '{"rrsets": [ {"name": "artemit.local", "type": "SOA", "changetype": "REPLACE", "records": [ {"content": "ns1.artemit.local hostmaster.artemit.com.es 0 10800 3600 604800 3600", "disabled": false, "name": "artemit.local", "ttl": 86400, "type": "SOA", "priority": 0 } ] } ] }' -H 'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones/artemit.local | jq .
+
+# Adding or editing an address record (A) so ns1.artemit.local record has the IP address 192.168.4.4
+curl -X PATCH --data '{"rrsets": [ {"name": "ns1.artemit.local", "type": "A", "changetype": "REPLACE", "records": [ {"content": "192.168.4.4", "disabled": false, "name": "ns1.artemit.local", "ttl": 86400, "type": "A", "priority": 0 } ] } ] }' -H 'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones/artemit.local | jq .
+
+# Adding or editing an alias record (CNAME) so tornasol.artemit.local has the same IP address as ns1.artemit.local.
+curl -X PATCH --data '{"rrsets": [ {"name": "tornasol.artemit.local", "type": "CNAME", "changetype": "REPLACE", "records": [ {"content": "ns1.artemit.local", "disabled": false, "name":"tornasol.artemit.local", "ttl": 86400, "type": "CNAME", "priority": 0 } ] } ] }' -H 'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones/artemit.local | jq .
+
+# Adding or editing a reverse lookup zone/domain if you want to ask for the hostname for an IP address in the 192.168.4.0/24 network:
+curl
+-X POST --data '{"name":"4.168.192.in-addr.arpa",
+"kind":
+"Master","dnssec":false,"soa-edit":"INCEPTION-INCREMENT","masters":
+[], "nameservers": ["ns1.artemit.local"]}' -v -H
+'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones
+| jq .
+
+# Adding or editing the SOA for the reverse lookup:
+curl -X PATCH --data '{"rrsets": [ {"name": "4.168.192.in-addr.arpa", "type": "SOA", "changetype": "REPLACE", "records": [ {"content": "ns1.artemit.local hostmaster.artemit.com.es 0 10800 3600 604800 3600", "disabled": false, "name": "4.168.192.in-addr.arpa", "ttl": 86400, "type": "SOA", "priority": 0 } ] } ] }' -H 'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones/4.168.192.in-addr.arpa | jq .
+
+# Adding or editing a reverse PTR record (e.g when asking for the 192.168.4.4 IP address we’ll get ns1.artemit.local
+curl -X PATCH --data '{"rrsets": [ {"name": "4.4.168.192.in-addr.arpa", "type": "PTR", "changetype": "REPLACE", "records": [ {"content": "ns1.artemit.local", "disabled": false, "name": "4.4.168.192.in-addr.arpa", "ttl": 86400, "type": "PTR", "priority": 0 } ] } ] }' -H 'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones/4.168.192.in-addr.arpa | jq .
+
+# Deleting a zone/domain (e.g artemit.local)
+curl -X DELETE -v -H 'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones/artemit.local | jq .
+
+
+

@@ -1,5 +1,6 @@
 # NOTES for power dns
-# 
+# HTTP API Doc is here, v3 and v4 has different syntax, so please pay attention
+# https://doc.powerdns.com/
 
 # Adding or editing a new zone/domain called artemit.local and assigning a name server called ns1.artemit.local
 curl -X POST --data '{"name":"artemit.local", "kind": "Master","dnssec":false,"soa-edit":"INCEPTION-INCREMENT","masters": [], "nameservers": ["ns1.artemit.local"]}' -v -H 'X-API-Key: changeme' http://127.0.0.1:8081/servers/localhost/zones | jq .

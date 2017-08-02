@@ -3,6 +3,8 @@
 https://rawcdn.githack.com/rabbitmq/rabbitmq-management/rabbitmq_v3_6_10/priv/www/api/index.html
 # Docs for Stats
 https://rawcdn.githack.com/rabbitmq/rabbitmq-management/rabbitmq_v3_6_10/priv/www/doc/stats.html
+# CLI
+https://www.rabbitmq.com/management-cli.html
 
 # rabbitmqadmin supports tab completion in bash. To print a bash completion script, invoke rabbitmqadmin --bash-completion. This should be redirected to a file and sourced.
 sudo sh -c 'rabbitmqadmin --bash-completion > /etc/bash_completion.d/rabbitmqadmin'

@@ -48,3 +48,6 @@ rabbitmqadmin -f tsv -q list connections name | while read conn ; do rabbitmqadm
 
 # Close specific connections
 rabbitmqctl list_connections pid user name | grep $WOW_SUBNET | awk '{print "rabbitmqctl close_connection \"" $1 "\" \"wow\"" | "/bin/bash" }'
+
+# Using username password
+python26 /usr/local/bin/rabbitmqadmin --vhost=nexus --port 15671 -s --username=UESRNAME --password=PASSWORD -f long -d 3 list queues|less

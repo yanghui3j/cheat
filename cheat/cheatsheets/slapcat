@@ -1,0 +1,14 @@
+# NOTES for slapcat
+
+# viewing cn=config
+slapcat -b cn=config
+
+# Slapd does not even have to be running. This command will dump the entire configuration,
+# but you can also filter its output, This will show only the root object
+slapcat -b cn=config -a cn=config
+
+# This will show both the root object and the hdb database definition
+slapcat -b cn=config -a "(|(cn=config)(olcDatabase={1}hdb))"
+
+# 
+

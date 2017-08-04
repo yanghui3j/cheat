@@ -222,6 +222,7 @@ cheat/cheatsheets/selinux
 cheat/cheatsheets/sendmail
 cheat/cheatsheets/shred
 cheat/cheatsheets/shutdown
+cheat/cheatsheets/slapcat
 cheat/cheatsheets/smartctl
 cheat/cheatsheets/smbclient
 cheat/cheatsheets/snmpget

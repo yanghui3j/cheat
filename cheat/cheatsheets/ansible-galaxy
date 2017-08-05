@@ -1,2 +1,5 @@
 # Create a custom role skeleton role_name under /var/tmp
 ansible-galaxy init -f -p /var/tmp/ role_name
+
+# Login with token and ignore SSL CA
+ansible-galaxy login --github-token THIS-IS-MY-TOKEN -c

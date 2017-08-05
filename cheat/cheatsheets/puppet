@@ -74,6 +74,8 @@ puppet --help --environment=production
 # On the node, check what class applied
 cat $(puppet agent --configprint classfile)
 
+# Look for puppet's info
+puppet node find 'myhost' --render-as yaml --terminus rest | grep " - "
 
 
 

@@ -77,5 +77,10 @@ cat $(puppet agent --configprint classfile)
 # Look for puppet's info
 puppet node find 'myhost' --render-as yaml --terminus rest | grep " - "
 
+# Using tags
+puppet agent --test --tags apache,us_mirror1
+
+
+
 
 

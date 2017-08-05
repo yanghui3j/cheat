@@ -71,6 +71,8 @@ puppet config print |grep codedir
 # exist?
 puppet --help --environment=production
 
+# On the node, check what class applied
+cat $(puppet agent --configprint classfile)
 
 
 

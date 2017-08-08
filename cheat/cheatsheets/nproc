@@ -1,0 +1,4 @@
+# NOTES for nproc
+
+# Show number of install processing unit
+nproc --all

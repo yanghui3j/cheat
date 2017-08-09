@@ -164,6 +164,7 @@ cheat/cheatsheets/nohup
 cheat/cheatsheets/notify-send
 cheat/cheatsheets/nova
 cheat/cheatsheets/npm
+cheat/cheatsheets/nproc
 cheat/cheatsheets/ntp
 cheat/cheatsheets/numfmt
 cheat/cheatsheets/od

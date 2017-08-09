@@ -61,5 +61,41 @@ openssl x509 –inform der –in sslcert.der –out sslcert.pem
 # Convert PEM to DER format
 openssl x509 –outform der –in sslcert.pem –out sslcert.der
 
+#################################################################################
+# CREATING YOUR OWN SSL CERTIFICATE AUTHORITY (AND DUMPING SELF SIGNED CERTS)
+#################################################################################
+# CREATE THE ROOT KEY
+openssl genrsa -out rootCA.key 2048
+openssl genrsa -des3 -out rootCA.key 2048
+# THE NEXT STEP IS TO SELF-SIGN THIS CERTIFICATE
+openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 1024 -out rootCA.pem
+# INSTALL ROOT CERTIFICATE INTO WORKSTATIONS
+******** some steps here ********
+# CREATE A CERTIFICATE (DONE ONCE PER DEVICE)
+openssl genrsa -out device.key 2048
+# ONCE THE KEY IS CREATED, YOU’LL GENERATE THE CERTIFICATE SIGNING REQUEST.
+openssl req -new -key device.key -out device.csr
+# CREATES A SIGNED CERTIFICATE CALLED DEVICE.CRT WHICH IS VALID FOR 500 DAYS
+openssl x509 -req -in device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 500 -sha256
+# THE NEXT STEP IS TO TAKE THE KEY AND THE CERTIFICATE AND INSTALL THEM IN YOUR DEVICE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

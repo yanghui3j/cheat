@@ -379,6 +379,16 @@ git fetch nullin  # Fetch code
 git cherry-pick commit1  # Pick up the interested commits into current branch
 git push origin master  # Push to remote
 
-
+# Fix Author email in the commit history
+# For example, if your commit history is A-B-C-D-E-F with F as HEAD, and you want to change the author of C and D, then you would...
+Specify git rebase -i B
+change the lines for both C and D to edit
+Once the rebase started, it would first pause at C
+You would git commit --amend --author="Author Name <email@address.com>"
+Then git rebase --continue
+It would pause again at D
+Then you would git commit --amend --author="Author Name <email@address.com>" again
+git rebase --continue
+The rebase would complete.
 
 

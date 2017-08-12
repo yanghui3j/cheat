@@ -28,6 +28,10 @@ pip install -r requirements.txt
 pip install -e .                     # project in current directory
 pip install -e path/to/project       # project in another directory
 
+# Output and install packages in a requirement file
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
 # Show details of a package
 pip show SomePackage
 

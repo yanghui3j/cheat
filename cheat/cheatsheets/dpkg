@@ -7,6 +7,9 @@ dpkg -i test.deb
 # Uninstalling a package can be accomplished by:
 sudo dpkg -r zip
 
+# Install the package or upgrade it
+dpkg -i test.deb
+
 # Remove a package including configuration files
 dpkg -P test.deb
 

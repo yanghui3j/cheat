@@ -92,3 +92,4 @@ SHOW VARIABLES LIKE "secure_file_priv";
 
 # Change the current state of a variable, you can do so easily with a command similar to this one
 SET GLOBAL max_connect_errors=10000;
+DELETE FROM tbl_name WHERE user = 'jcole';

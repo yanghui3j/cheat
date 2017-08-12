@@ -19,6 +19,9 @@ nova hypervisor-stats
 # Check the cells and placement API are working successfully
 nova-status upgrade check
 
+# To list VMs on current tenant:
+nova list
+
 # To list VMs of all tenants (admin user only):
 nova list --all-tenants
 

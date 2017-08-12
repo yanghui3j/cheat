@@ -45,4 +45,3 @@ sudo apt-get --purge autoremove
 
 # Clean Obsolete Downloaded Package Files
 sudo apt-get autoclean
-

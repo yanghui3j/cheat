@@ -20,7 +20,7 @@
 set -o nounset                              # Treat unset variables as an error
 
 #git remote add git@github.com:chrisallenlane/cheat.git
-cd ~/cheat
+#cd ~/cheat
 git checkout master
 git pull git@github.com:chrisallenlane/cheat.git
 git commit -m 'merging upstream'

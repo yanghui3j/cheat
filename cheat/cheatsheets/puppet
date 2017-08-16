@@ -63,8 +63,14 @@ puppet parser validate test.pp
 # restore a file with md5 as ee6e8ff6f94123838a6d6df1514af3c0 in clientbucket from the local copy
 puppet filebucket restore --local --bucket /opt/puppetlabs/puppet/cache/clientbucket/ /usr/local/bin/plugins/check_ipmi ee6e8ff6f94123838a6d6df1514af3c0 --environment=production
 
+# To list files
+puppet filebucket --environment=production --bucket=/opt/puppetlabs/puppet/cache/clientbucket list
+
+# To list files with date range
+puppet filebucket --environment=production --bucket=/opt/puppetlabs/puppet/cache/clientbucket -f 2017-08-03 -t 2017-08-05 list
+
 # Find the puppet configurations
-puppet config print |grep codedir
+puppet config print|grep codedir
 
 # You see this error: Could not find a directory environment named 'puppet4'
 # anywhere in the path: /etc/puppetlabs/code/environments. Does the directory
@@ -79,7 +85,6 @@ puppet node find 'myhost' --render-as yaml --terminus rest | grep " - "
 
 # Using tags
 puppet agent --test --tags apache,us_mirror1
-
 
 
 

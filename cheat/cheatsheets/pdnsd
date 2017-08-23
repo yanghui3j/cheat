@@ -1,4 +1,5 @@
 # PDNSD
+# http://members.home.nl/p.a.rombouts/pdnsd/doc.html#pdnsdctl
 
 # View cache
 pdnsd-ctl dump

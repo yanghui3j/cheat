@@ -1,0 +1,13 @@
+# NOTES for ausearch
+
+# Use -m comma-separated list of audit record types to filter by, and -i for numeric values to be interpreted into strings depending on the system
+ausearch -m AVC,USER_AVC,SELINUX_ERR,USER_SELINUX_ERR -i
+
+# Searching for records and creating a checkpoint, to ensure that audit records that have already been seen don't show up again on the next search
+ausearch --checkpoint="./audit-checkpoint" -m AVC,USER_AVC,SELINUX_ERR,USER_SELINUX_ERR -i
+
+# Searching for records based on the processes comm name, this is the executable name from the task in the kernel
+ausearch -c "httpd" -m AVC,USER_AVC,SELINUX_ERR,USER_SELINUX_ERR -i
+
+# Finding events where an admin (or program) changed the enforcing state of SELinux
+ausearch -m MAC_STATUS -i

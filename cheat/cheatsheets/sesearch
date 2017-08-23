@@ -1,0 +1,4 @@
+# NOTES for sesearch
+
+# Search with using policy analysis tools
+sesearch -ACS -t ssh_home_t -c file -p read|less

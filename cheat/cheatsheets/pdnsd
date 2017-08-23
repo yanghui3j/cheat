@@ -1,0 +1,7 @@
+# PDNSD
+
+# View cache
+pdnsd-ctl dump
+
+# Flush cache
+pdnsd-ctl empty-cache

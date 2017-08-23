@@ -31,6 +31,9 @@ cheat/cheatsheets/aria2c
 cheat/cheatsheets/asciiart
 cheat/cheatsheets/asterisk
 cheat/cheatsheets/at
+cheat/cheatsheets/audit2allow
+cheat/cheatsheets/audit2why
+cheat/cheatsheets/ausearch
 cheat/cheatsheets/awk
 cheat/cheatsheets/aws
 cheat/cheatsheets/bash
@@ -185,6 +188,7 @@ cheat/cheatsheets/patch
 cheat/cheatsheets/pcs
 cheat/cheatsheets/pdftk
 cheat/cheatsheets/pdns
+cheat/cheatsheets/pdnsd
 cheat/cheatsheets/perf
 cheat/cheatsheets/perl
 cheat/cheatsheets/php
@@ -218,9 +222,11 @@ cheat/cheatsheets/sam2p
 cheat/cheatsheets/samba
 cheat/cheatsheets/scp
 cheat/cheatsheets/screen
+cheat/cheatsheets/sealert
 cheat/cheatsheets/sed
 cheat/cheatsheets/selinux
 cheat/cheatsheets/sendmail
+cheat/cheatsheets/sesearch
 cheat/cheatsheets/shred
 cheat/cheatsheets/shutdown
 cheat/cheatsheets/slapcat

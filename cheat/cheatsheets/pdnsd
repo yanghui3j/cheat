@@ -6,3 +6,6 @@ pdnsd-ctl dump
 
 # Flush cache
 pdnsd-ctl empty-cache
+
+# Check status of pdnsd
+pdnsd-ctl status

@@ -1,0 +1,14 @@
+# NOTES FOR audit2allow
+
+# Creating Custom SELinux Policy Modules with audit2allow
+grep smtpd_t /var/log/audit/audit.log | audit2allow -m postgreylocal > postgreylocal.te
+
+# Use audit2allow to make a custom policy module to allow these actions
+grep smtpd_t /var/log/audit/audit.log | audit2allow -M postgreylocal
+
+# We then load our postgrey policy module using the 'semodule' command into the current SELinux policy
+semodule -i postgreylocal.pp
+
+
+
+

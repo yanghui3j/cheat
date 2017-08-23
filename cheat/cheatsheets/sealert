@@ -1,0 +1,4 @@
+# NOTES for sealert
+
+# Show details on selinux alert and solution
+sealert -a /var/log/audit/audit.log

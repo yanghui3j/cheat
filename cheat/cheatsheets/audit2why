@@ -1,0 +1,4 @@
+# AUDIT2WHY
+
+# Show solutions
+ausearch -m avc|audit2why

@@ -14,3 +14,22 @@ lscpu
 
 # Verify on what cores your service is entitled to run
 for i in $(pgrep firefox) ; do taskset -pc $i ; done
+
+# Change CPU Affinity 
+# Edit your applications ( in my case radosgw ) systemctl service configuration
+# files /usr/lib/systemd/system/ceph-radosgw\@.service and add the following
+# section to [Service] section of unit file
+CPUAffinity= 10 11 12 13 14 15 16 17 18 19 30 31 32 33 34 35 36 37 38 39
+
+## Reload changes
+systemctl daemon-reload
+systemctl restart ceph-radosgw@rgw.$(hostname -s).service
+systemctl status ceph-radosgw@rgw.$(hostname -s).service -l
+
+## Verify your daemon is getting pinned to the correct CPU cores
+sudo for i in $(pgrep radosgw) ; do taskset -pc $i ; done
+
+# Another way of doing this or may more easier way is to use numactl command
+# which can bind application to entire NUMA node which includes both CPU and
+# Memory bindings
+numactl --cpunodebind=1 --membind=1 radosgw

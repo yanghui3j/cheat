@@ -11,3 +11,6 @@ grep -i numa /var/log/dmesg
 # Identify your NUMA zones , using numactl CLI
 numactl --hardware
 lscpu
+
+# Verify on what cores your service is entitled to run
+for i in $(pgrep firefox) ; do taskset -pc $i ; done

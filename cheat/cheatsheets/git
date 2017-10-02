@@ -123,6 +123,19 @@ git filter-branch --env-filter \
          export GIT_COMMITTER_DATE="Sat May 19 01:01:01 2007 -0700"
      fi'
 
+# Git commit in the past
+git commit --date="`date --date='2 day ago'`"
+git commit --date="Jun 13 18:30:25 IST 2015"
+# more recent versions of Git also support --date="2 days ago" directly
+
+# To change the date of an existing commit
+git filter-branch --env-filter \
+    'if [ $GIT_COMMIT = 119f9ecf58069b265ab22f1f97d2b648faf932e0 ]
+     then
+         export GIT_AUTHOR_DATE="Fri Jan 2 21:38:53 2009 -0800"
+         export GIT_COMMITTER_DATE="Sat May 19 01:01:01 2007 -0700"
+     fi'
+
 # To removed staged and working directory changes
 git reset --hard
 
@@ -230,6 +243,7 @@ git reset --hard origin/master
 # How to view conflicts? find the conflicts and fix it
 Between conflict marker "<<<<<<< HEAD" and "=======" is changed by Me
 Between conflict marker "=======" and ">>>>>>> 74dfd51601bd368e03b9651641e0cfe173c6d232" is changed by others
+
 # Update all your submodules
 git submodule update --init --recursive
 
@@ -409,4 +423,3 @@ It would pause again at D
 Then you would git commit --amend --author="Author Name <email@address.com>" again
 git rebase --continue
 The rebase would complete.
-

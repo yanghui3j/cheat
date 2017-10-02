@@ -23,3 +23,5 @@ mount -o loop disk1.iso /mnt/disk
 
 # Force a remount
 # mount -t selinuxfs none /sys/fs/selinux
+# To mount an ISO
+mount -o loop disk1.iso /mnt/disk

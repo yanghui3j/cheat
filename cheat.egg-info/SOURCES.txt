@@ -17,6 +17,7 @@ cheat/cheatsheets/3par
 cheat/cheatsheets/7z
 cheat/cheatsheets/__init__.py
 cheat/cheatsheets/ab
+cheat/cheatsheets/alias
 cheat/cheatsheets/ansi
 cheat/cheatsheets/ansible
 cheat/cheatsheets/ansible-galaxy
@@ -43,6 +44,7 @@ cheat/cheatsheets/bower
 cheat/cheatsheets/brctl
 cheat/cheatsheets/brocade
 cheat/cheatsheets/bzip2
+cheat/cheatsheets/cat
 cheat/cheatsheets/cheat
 cheat/cheatsheets/chmod
 cheat/cheatsheets/chown
@@ -51,10 +53,12 @@ cheat/cheatsheets/cinder
 cheat/cheatsheets/cisco
 cheat/cheatsheets/cman_tool
 cheat/cheatsheets/convert
+cheat/cheatsheets/cp
 cheat/cheatsheets/cpdf
 cheat/cheatsheets/cpio
 cheat/cheatsheets/crm
 cheat/cheatsheets/crontab
+cheat/cheatsheets/cryptsetup
 cheat/cheatsheets/csplit
 cheat/cheatsheets/cups
 cheat/cheatsheets/curl
@@ -78,6 +82,7 @@ cheat/cheatsheets/eb
 cheat/cheatsheets/ebtables
 cheat/cheatsheets/emacs
 cheat/cheatsheets/ethtool
+cheat/cheatsheets/export
 cheat/cheatsheets/fab
 cheat/cheatsheets/ffmpeg
 cheat/cheatsheets/find
@@ -151,6 +156,7 @@ cheat/cheatsheets/mkdir
 cheat/cheatsheets/more
 cheat/cheatsheets/mount
 cheat/cheatsheets/mstsc
+cheat/cheatsheets/mv
 cheat/cheatsheets/mysql
 cheat/cheatsheets/mysqldump
 cheat/cheatsheets/naviseccli
@@ -169,6 +175,7 @@ cheat/cheatsheets/nova
 cheat/cheatsheets/npm
 cheat/cheatsheets/nproc
 cheat/cheatsheets/ntp
+cheat/cheatsheets/numa
 cheat/cheatsheets/numfmt
 cheat/cheatsheets/od
 cheat/cheatsheets/omping
@@ -191,18 +198,22 @@ cheat/cheatsheets/pdns
 cheat/cheatsheets/pdnsd
 cheat/cheatsheets/perf
 cheat/cheatsheets/perl
+cheat/cheatsheets/pgrep
 cheat/cheatsheets/php
 cheat/cheatsheets/ping
 cheat/cheatsheets/ping6
 cheat/cheatsheets/pip
 cheat/cheatsheets/pkgtools
+cheat/cheatsheets/pkill
 cheat/cheatsheets/popd
 cheat/cheatsheets/postfix
 cheat/cheatsheets/postgresql
 cheat/cheatsheets/proc
 cheat/cheatsheets/ps
+cheat/cheatsheets/psql
 cheat/cheatsheets/puppet
 cheat/cheatsheets/pushd
+cheat/cheatsheets/pwd
 cheat/cheatsheets/python
 cheat/cheatsheets/rabbitmqadmin
 cheat/cheatsheets/rabbitmqctl
@@ -286,6 +297,7 @@ cheat/cheatsheets/vim
 cheat/cheatsheets/virsh
 cheat/cheatsheets/virtualenv
 cheat/cheatsheets/vxprint
+cheat/cheatsheets/wc
 cheat/cheatsheets/weechat
 cheat/cheatsheets/wget
 cheat/cheatsheets/xargs
@@ -298,6 +310,7 @@ cheat/cheatsheets/youtube-dl
 cheat/cheatsheets/yum
 cheat/cheatsheets/zip
 cheat/cheatsheets/zoneadm
+cheat/cheatsheets/zsh
 cheat/test/__init__.py
 licenses/gpl-3.txt
 licenses/mit.txt

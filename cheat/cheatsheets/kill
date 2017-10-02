@@ -2,3 +2,8 @@
 # used to check for the existence of a process ID or process group ID.
 kill -0 pid
 killall -0 ProcessName
+# Kill a process gracefully
+kill -15 <process id>
+
+# Kill a process forcefully
+kill -9 <process id>

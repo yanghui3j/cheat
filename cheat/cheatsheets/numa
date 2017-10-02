@@ -1,5 +1,5 @@
 # NUMA
-
+# numa
 # Verify how application (firefox in my case) threads being executed currently.
 # The 5th column psr which represents processor core.
 for i in $(pgrep firefox); do ps -mo pid,tidfinalname,userpublicsr -p $i;done|sed -n '3,$p'|sort -k5,5

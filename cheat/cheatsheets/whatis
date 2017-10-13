@@ -1,0 +1,6 @@
+# Note For whatis to find help and man details
+# The whatis command shows a one-line summary of a command, taken from its man page. It’s a
+# quick way of seeing what a command actually does.
+
+whatis find
+

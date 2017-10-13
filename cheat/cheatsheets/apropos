@@ -1,0 +1,7 @@
+# apropos for find help(man) pages
+# The apropos command searches for man pages that contain a phrase, so it’s a quick way of
+# finding a command that can do something. It’s the same thing as running the man -k
+# command.
+
+# List all man pages with find in, the same as man -k
+apropos find

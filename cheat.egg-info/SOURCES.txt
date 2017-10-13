@@ -24,6 +24,7 @@ cheat/cheatsheets/ansible-galaxy
 cheat/cheatsheets/ansible-playbook
 cheat/cheatsheets/apk
 cheat/cheatsheets/apparmor
+cheat/cheatsheets/apropos
 cheat/cheatsheets/apt
 cheat/cheatsheets/apt-cache
 cheat/cheatsheets/apt-get
@@ -300,6 +301,7 @@ cheat/cheatsheets/vxprint
 cheat/cheatsheets/wc
 cheat/cheatsheets/weechat
 cheat/cheatsheets/wget
+cheat/cheatsheets/whatis
 cheat/cheatsheets/xargs
 cheat/cheatsheets/xmlto
 cheat/cheatsheets/xrandr

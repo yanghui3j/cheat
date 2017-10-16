@@ -48,5 +48,60 @@ rpm -q --last package-name
 # Show time-stamp for all package 
 rpm -qa --last
 
-# rpm db corruption fix
+# RPM Stale lock file cleanup - files needed for updating are being held open
 https://access.redhat.com/solutions/6903
+# 1A) Reboot system (preferred)
+# The best course of action is to simply reboot the machine, as the system cleans
+# up stale locks during the sysinit portion of boot. The cleanup occurs at this
+# stage as the system is assured there is no process that would have a lock on the
+# RPM database.
+grep rpm /etc/rc.d/rc.sysinit
+rm -f /var/lib/rpm/__db* &> /dev/null
+
+# 1B) Reboot not feasible (more risky than reboot)
+## Delete all files in /var/spool/up2date
+cd /var/spool/up2date
+rm *
+rm .*
+## Ensure there are no processes with the RPM database files open. One way to do
+## this is using lsof & ps as the root user:
+ps -aux | grep -e rpm -e yum -e up2date
+lsof | grep /var/lib/rpm
+## If, and only if, there is no RPM database activity going on it is safe to
+## delete the lock files.
+## WARNING: If the system is in multi-user mode it is possible that a process may
+## open the RPM database at any time. Therefore, the recommended method for
+## clearing stale locks is the reboot which cleans up the locks prior to entering
+## multi-user mode.
+rm -f /var/lib/rpm/__db*
+
+# RPM DB CORRUPTION FIX
+https://access.redhat.com/solutions/6903
+## Backup files
+cd /var/lib
+tar -zcvf /var/preserve/rpmdb-$(date +%Y-%m-%d_%H-%M-%S).tar.gz rpm
+## Verify integrity of the Packages file
+cd /var/lib/rpm
+rm -f __db*      # to avoid stale locks
+/usr/lib/rpm/rpmdb_verify Packages
+echo $?
+## If the above verify reports any errors, a dump and load of the database is required
+mv Packages Packages.orig
+/usr/lib/rpm/rpmdb_dump Packages.orig | /usr/lib/rpm/rpmdb_load Packages
+## Verify the newly loaded Packages file, as well as rpm output
+/usr/lib/rpm/rpmdb_verify Packages
+rpm -qa >/dev/null    # Validating there are no errors
+rpm -qa               # Validating list of installed RPMs
+## If no errors and everything looks good, rebuild the RPM indexes
+rpm -vv --rebuilddb
+## Once again verify RPM database
+cd /var/lib/rpm
+/usr/lib/rpm/rpmdb_verify Packages
+
+
+
+
+
+
+
+

@@ -3,3 +3,6 @@ host -t MX domain.net
 
 # Grab a whole bunch of precious information in a domain
 host -alv domain.net
+
+# Testing AXFR with host command
+host -t axfr domain.name dns-server

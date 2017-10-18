@@ -6,3 +6,5 @@
 # http://linux.vbird.org/linux_server/0350dns.php#rr_soa
 dig -t soa ksu.edu.tw
 
+# Testing AXFR with dig command
+dig axfr @dns-server domain.name

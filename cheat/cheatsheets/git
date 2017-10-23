@@ -44,6 +44,9 @@ git config --global user.email johndoe@example.com
 git diff --color-words
 git diff --word-diff=color
 
+# Show tags of currnet branch
+git describe --tags
+
 # To set your editor:
 git config --global core.editor emacs
 

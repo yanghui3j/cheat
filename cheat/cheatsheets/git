@@ -44,9 +44,6 @@ git config --global user.email johndoe@example.com
 git diff --color-words
 git diff --word-diff=color
 
-# Show tags of currnet branch
-git describe --tags
-
 # To set your editor:
 git config --global core.editor emacs
 
@@ -426,3 +423,33 @@ It would pause again at D
 Then you would git commit --amend --author="Author Name <email@address.com>" again
 git rebase --continue
 The rebase would complete.
+
+# List all tag
+git tag
+
+# Create a tag on current commit
+git tag [tag]
+
+# Create a tag on specified commit
+git tag [tag] [commit]
+
+# Delete local tag
+git tag -d [tag]
+
+# Delete remote tag
+git push origin :refs/tags/[tagName]
+
+# Display tag details
+git show [tag]
+
+# Push tag to remote
+git push [remote] [tag]
+
+# Push all tags to remote
+git push [remote] --tags
+
+# Create a new branch and give it a tag
+git checkout -b [branch] [tag]
+
+# Show tags of currnet branch
+git describe --tags

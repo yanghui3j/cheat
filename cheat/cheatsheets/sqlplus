@@ -1,0 +1,4 @@
+# Doc for sqlplus
+
+# Logon database with sysdba
+sqlplus / as sysdba

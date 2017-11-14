@@ -253,6 +253,7 @@ cheat/cheatsheets/split
 cheat/cheatsheets/sport
 cheat/cheatsheets/sqlite3
 cheat/cheatsheets/sqlmap
+cheat/cheatsheets/sqlplus
 cheat/cheatsheets/ss
 cheat/cheatsheets/ssh
 cheat/cheatsheets/ssh-copy-id

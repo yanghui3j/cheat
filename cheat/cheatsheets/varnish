@@ -9,6 +9,9 @@ varnishlog | egrep --line-buffered '(ReqURL|RespStatus|Backend) '
 # Show specific fields of logs
 varnishlog -i ReqURL,ReqProtocol
 
+# Show logs grouping by request
+varnishlog -g request
+
 # To display the number of threads currently being used, run:
 varnishstat -f MAIN.threads
 

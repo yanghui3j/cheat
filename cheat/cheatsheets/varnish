@@ -21,6 +21,15 @@ cache_hit/(cache_hit + cache_miss)
 # Displays Varnish access logs in NCSA Common log format
 varnishncsa
 
+# Show you what URLs are being asked for by the client
+varnishtop -i ReqURL
+
+# Show you what your backend is being asked the most
+varnishtop -i BereqURL
+
+# Show the most popular Accept-Encoding header the client are sending you
+varnishtop -I ReqHeader:Accept-Encoding
+
 # Enable inline C in VCL
 # The include statements must be outside the subroutines.
 # Adding following line in the varnish.service systemd file

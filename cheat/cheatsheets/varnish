@@ -30,6 +30,9 @@ varnishtop -i BereqURL
 # Show the most popular Accept-Encoding header the client are sending you
 varnishtop -I ReqHeader:Accept-Encoding
 
+# The varnishhist utility reads varnishd shared memory logs and presents a continuously updated histogram showing the distribution of the last N requests by their processing. The value of N and the vertical scale are displayed in the top left corner. The horizontal scale is logarithmic. Hits are marked with a pipe character ("|"), and misses are marked with a hash character ("#").
+varnishhist
+
 # Enable inline C in VCL
 # The include statements must be outside the subroutines.
 # Adding following line in the varnish.service systemd file

@@ -48,3 +48,6 @@ curl http://169.254.169.254/latest/user-data
 
 # Get your global IP
 curl httpbin.org/ip 
+
+# Get only the HTTP status code
+curl -o /dev/null -w '%{http_code}\n' -s -I URL

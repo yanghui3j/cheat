@@ -219,6 +219,7 @@ cheat/cheatsheets/python
 cheat/cheatsheets/rabbitmqadmin
 cheat/cheatsheets/rabbitmqctl
 cheat/cheatsheets/racadm
+cheat/cheatsheets/rdesktop
 cheat/cheatsheets/readline
 cheat/cheatsheets/redis
 cheat/cheatsheets/rename

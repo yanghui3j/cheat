@@ -1,0 +1,4 @@
+# Notes for Rdesktop
+
+# Enable backgroup and all feature
+rdesktop -x l -a 32 -g 1480x960 IP_Address -u 'Doamin\jzhu' -p 'PASSW0RD'

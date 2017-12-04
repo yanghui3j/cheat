@@ -60,3 +60,6 @@ aws --profile profilename iam list-role-policies --role-name trust-company-team
 # Get current region in profile
 aws configure get region
 aws configure get --profile PROFILE_NAME
+
+# Check cloudwatch metrics stats
+aws cloudwatch get-metric-statistics --namespace "AWS/DX" --metric-name ConnectionCRCErrorCount --start-time 2017-12-01T00:00:00 --end-time 2017-12-04T06:00:00 --period 3600 --statistics Maximum --dimensions Name=ConnectionId,Value=dxcon-fhb6icxx --profile PROFILE

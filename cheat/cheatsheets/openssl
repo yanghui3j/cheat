@@ -67,6 +67,16 @@ openssl x509 –inform der –in sslcert.der –out sslcert.pem
 # Convert PEM to DER format
 openssl x509 –outform der –in sslcert.pem –out sslcert.der
 
+# Verifying Enabled TLS Versions
+# To verify provided TLS versions, use openssl s_client
+# Connect using SSLv3
+openssl s_client -connect 127.0.0.1:5671 -ssl3
+# Connect using TLSv1.0 through v1.2
+openssl s_client -connect 127.0.0.1:5671 -tls1
+# And look for the following in the output
+SSL-Session:
+  Protocol  : TLSv1
+
 #################################################################################
 # CREATING YOUR OWN SSL CERTIFICATE AUTHORITY (AND DUMPING SELF SIGNED CERTS)
 #################################################################################

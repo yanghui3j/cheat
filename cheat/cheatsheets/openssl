@@ -79,6 +79,7 @@ SSL-Session:
 
 #################################################################################
 # CREATING YOUR OWN SSL CERTIFICATE AUTHORITY (AND DUMPING SELF SIGNED CERTS)
+# http://www.davidpashley.com/articles/becoming-a-x-509-certificate-authority/
 #################################################################################
 # CREATE THE ROOT KEY
 openssl genrsa -out rootCA.key 2048
